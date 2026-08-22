@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reach Skyline | AI-Powered Creative & Digital Marketing Agency</title>
+  <meta name="description" content="Reach Skyline is an AI-powered creative and digital marketing agency established in 2016. Creative. Digital. Performance. Design. Content. Strategy. Results." />
+  
+  <!-- Google Fonts: Outfit, Syne, Plus Jakarta Sans, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. Navigation Bar
+       ========================================================================= -->
+  <header class="navbar" id="mainNavbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-brand">
+        <img src="./assets/reach_skyline_logo_dark.png" alt="Reach Skyline" class="nav-logo-img" />
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#social" class="nav-link">Social</a></li>
+          <li><a href="#video" class="nav-link">Video & Ads</a></li>
+          <li><a href="#seo" class="nav-link">SEO</a></li>
+          <li><a href="#web-development" class="nav-link">Web Development</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-primary btn-sm" onclick="openContactModal()">Let's Talk</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Open Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer -->
+  <div class="mobile-menu-overlay" id="mobileMenu">
+    <ul class="mobile-menu-list">
+      <li><a href="#hero" class="mobile-menu-link">Home</a></li>
+      <li><a href="#about" class="mobile-menu-link">About</a></li>
+      <li><a href="#services" class="mobile-menu-link">Services</a></li>
+      <li><a href="#social" class="mobile-menu-link">Social Media</a></li>
+      <li><a href="#video" class="mobile-menu-link">Video & Ads</a></li>
+      <li><a href="#seo" class="mobile-menu-link">SEO Performance</a></li>
+      <li><a href="#web-development" class="mobile-menu-link">Web Development</a></li>
+      <li><a href="#process" class="mobile-menu-link">Our Process</a></li>
+      <li><a href="#contact" class="mobile-menu-link">Contact Us</a></li>
+    </ul>
+    <div class="mobile-menu-footer">
+      <button class="btn btn-primary" style="width: 100%;" onclick="openContactModal()">Start a Project</button>
+      <div style="text-align: center; margin-top: 1.5rem; color: var(--text-muted); font-size: 0.85rem;">
+        Solutions@reachskyline.com
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       2. Hero Section (Redesigned Luxury Agency Theme)
+       ========================================================================= -->
+  <section class="hero-section" id="hero">
+    <div class="hero-grid-pattern"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <span class="badge-pulse"></span>
+        <span class="badge-text">AI-POWERED DIGITAL MARKETING AGENCY</span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="hero-line">Creative.</span>
+        <span class="hero-line">Digital.</span>
+        <span class="hero-line text-gradient-gold">Performance.</span>
+      </h1>
+
+      <p class="hero-subheadline">
+        AI-powered digital marketing that transforms brands, builds visibility and drives measurable growth.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#web-development" class="btn btn-primary">
+          <span>Explore Our Work</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </a>
+        <button class="btn btn-secondary" onclick="openContactModal()">
+          <span>Start a Project</span>
+        </button>
+      </div>
+
+      <div class="hero-floating-pills">
+        <span class="micro-pill">AI STRATEGY</span>
+        <span class="micro-pill">TECHNICAL SEO</span>
+        <span class="micro-pill">SOCIAL MARKETING</span>
+        <span class="micro-pill">PAID ADS</span>
+        <span class="micro-pill">CREATIVE CONTENT</span>
+        <span class="micro-pill">WEB DEVELOPMENT</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. About Section & Agency Highlights
+       ========================================================================= -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div>
+          <div class="section-tag">About Reach Skyline</div>
+          <h2 class="about-statement">
+            "Reach Skyline has grown from a small college startup into a <span class="text-gradient-gold">globally recognized</span> digital marketing agency."
+          </h2>
+          <p class="about-desc">
+            Established in 2016, we combine cutting-edge AI technologies, creative design, and performance-driven strategies to help businesses redefine their digital presence and scale worldwide. Available 24/7 for dedicated execution and client support.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-outline-gold" onclick="openContactModal()">
+              <span>Work With Us</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Animated Counters -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number counter-val" data-target="10" data-suffix="+">10+</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number counter-val" data-target="25" data-suffix="+">25+</div>
+            <div class="stat-label">Professionals</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number counter-val" data-target="50" data-suffix="+">50+</div>
+            <div class="stat-label">Brands Partnered</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number text-gradient-gold">24/7</div>
+            <div class="stat-label">Global Support</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Hire Reach Skyline? (6 Core Pillars from PDF Cover Letter) -->
+      <div style="margin-top: 5rem;">
+        <h3 class="pillars-title">
+          Why Brands Choose <span class="text-gold">Reach Skyline</span>
+        </h3>
+        
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path></svg>
+            </div>
+            <h4 class="pillar-name">AI-Powered Marketing</h4>
+            <p class="pillar-desc">Advanced AI tools and latest technologies for smarter content, intelligent audience targeting, and high-impact campaigns.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            </div>
+            <h4 class="pillar-name">No Copyright Issues</h4>
+            <p class="pillar-desc">100% original, brand-safe creative assets tailored specifically to your business and commercial goals.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
+            </div>
+            <h4 class="pillar-name">Brand-Guideline Oriented</h4>
+            <p class="pillar-desc">Every single post, campaign, and creative is meticulously aligned with your bespoke brand voice and visual identity.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h4 class="pillar-name">On-Time Deliverables</h4>
+            <p class="pillar-desc">Consistent and reliable execution according to your structured content calendar and publishing roadmap.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+            </div>
+            <h4 class="pillar-name">Performance-Oriented</h4>
+            <p class="pillar-desc">Laser focus on real engagement, organic & paid reach, qualified lead acquisition, and continuous measurable growth.</p>
+          </div>
+
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h4 class="pillar-name">Revenue-Driven Marketing</h4>
+            <p class="pillar-desc">Strategies engineered not merely for surface visibility, but to power bottom-line business expansion and revenue.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Services Section (01 - 07)
+       ========================================================================= -->
+  <section class="section" id="services" style="background: var(--bg-darker);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">What We Do</div>
+        <h2 class="section-title">Core Capabilities & <span class="text-gradient-gold">Services</span></h2>
+        <p class="section-subtitle">Comprehensive digital solutions engineered for scale, market leadership, and measurable business performance.</p>
+      </div>
+
+      <div class="services-list">
+        <!-- 01 Website Development -->
+        <div class="service-row" onclick="openContactModal('Website Development')">
+          <div class="service-num">01</div>
+          <div class="service-title">Website Development</div>
+          <div class="service-desc">Custom, responsive digital experiences built for lightning performance, intuitive UX, and high conversion rates.</div>
+        </div>
+
+        <!-- 02 SEO -->
+        <div class="service-row" onclick="openContactModal('SEO')">
+          <div class="service-num">02</div>
+          <div class="service-title">SEO (Search Engine Optimization)</div>
+          <div class="service-desc">Technical audits, Core Web Vitals optimization, on-page keyword targeting, off-page authority, and Google Business Profile scaling.</div>
+        </div>
+
+        <!-- 03 Social Media Marketing -->
+        <div class="service-row" onclick="openContactModal('Social Media Marketing')">
+          <div class="service-num">03</div>
+          <div class="service-title">Social Media Marketing</div>
+          <div class="service-desc">Strategic organic growth, brand-safe creative design, community management, and consistent calendar execution across all major platforms.</div>
+        </div>
+
+        <!-- 04 Video Marketing -->
+        <div class="service-row" onclick="openContactModal('Video Marketing')">
+          <div class="service-num">04</div>
+          <div class="service-title">Video Marketing</div>
+          <div class="service-desc">High-production brand films, corporate documentaries, hospital tours, client case studies, and storytelling motion assets.</div>
+        </div>
+
+        <!-- 05 Social Media Advertising -->
+        <div class="service-row" onclick="openContactModal('Social Media Advertising')">
+          <div class="service-num">05</div>
+          <div class="service-title">Social Media Advertising</div>
+          <div class="service-desc">Precision-targeted Carousel Ads, lead generation funnels, and performance marketing campaigns (including enterprise brands like Tata Motors).</div>
+        </div>
+
+        <!-- 06 Reels & Shorts -->
+        <div class="service-row" onclick="openContactModal('Reels & Shorts')">
+          <div class="service-num">06</div>
+          <div class="service-title">Reels & Shorts</div>
+          <div class="service-desc">High-retention vertical video content optimized for Instagram Reels, YouTube Shorts, and viral algorithmic reach.</div>
+        </div>
+
+        <!-- 07 Traditional Advertising -->
+        <div class="service-row" onclick="openContactModal('Traditional Advertising')">
+          <div class="service-num">07</div>
+          <div class="service-title">Traditional Advertising</div>
+          <div class="service-desc">Impactful offline visibility from high-traffic city billboards to major national print and newspaper advertisement campaigns.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. Social Media & Brand Channels
+       ========================================================================= -->
+  <section class="section" id="social">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Social Media & Brand Channels</div>
+        <h2 class="section-title">Brands We Build <span class="text-gradient-gold">Beyond the Feed.</span></h2>
+        <p class="section-subtitle">Authentic digital presence and active channels managed for premier brands across Instagram and YouTube.</p>
+      </div>
+
+      <!-- Client Selector Tab Filter Bar -->
+      <div class="client-selector-bar">
+        <button class="client-filter-btn active" onclick="filterSocialClient('all', this)">All Brands</button>
+        <button class="client-filter-btn" onclick="filterSocialClient('gem', this)">GEM Hospital</button>
+        <button class="client-filter-btn" onclick="filterSocialClient('madrascoffee', this)">Madras Coffee House</button>
+        <button class="client-filter-btn" onclick="filterSocialClient('rkhospitality', this)">RK Hospitality</button>
+        <button class="client-filter-btn" onclick="filterSocialClient('ramnath', this)">Ramnath Bhagavath</button>
+        <button class="client-filter-btn" onclick="filterSocialClient('supreme', this)">Supreme Hospitals</button>
+        <button class="client-filter-btn" onclick="filterSocialClient('hercyclopedia', this)">Hercyclopedia</button>
+        <button class="client-filter-btn" onclick="filterSocialClient('scsvmv', this)">SCSVMV University</button>
+      </div>
+
+      <!-- Stacked Client Brand Showcases (Dual-Mode: Verified Content / Channel Showcase) -->
+      <div class="brand-showcase-list">
+
+                                <!-- Client 1: GEM Hospitals -->
+        <div class="brand-showcase-card" data-client="gem">
+          <div class="brand-card-header">
+            <div class="brand-info-left">
+              <div class="brand-avatar-badge">
+                <img src="./assets/logo_gem_avatar.png" alt="GEM Hospitals Logo" loading="lazy" />
+              </div>
+              <div class="brand-title-group">
+                <h3>GEM Hospitals</h3>
+                <span class="brand-handle-pill">@gemhospitals • Multispeciality Gastroenterology & Robotic Surgery</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.instagram.com/gemhospitalchennai/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>Instagram Profile</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://www.youtube.com/@gemhospitalchennai7419" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <span>YouTube Channel</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mode A: Verified Content (Continuous Infinite Auto-Scroll Marquee) -->
+          <div class="brand-carousel-marquee-wrapper">
+            <div class="brand-carousel-marquee-track">
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbqOptbCYyC/embed" title="Doctor Spotlight Reel" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Doctor Spotlight Reel</h5>
+                  <a href="https://www.instagram.com/reel/DbqOptbCYyC/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DcOOlgyDzUU/embed" title="Clinical Health Post" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Clinical Health Post</h5>
+                  <a href="https://www.instagram.com/p/DcOOlgyDzUU/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/Da2s_VmiSR5/embed" title="Specialist Awareness" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Specialist Awareness</h5>
+                  <a href="https://www.instagram.com/reel/Da2s_VmiSR5/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DcLl8_vj7LJ/embed" title="Health Awareness" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Health Awareness</h5>
+                  <a href="https://www.instagram.com/p/DcLl8_vj7LJ/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/fSHdCyf7T8U', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/fSHdCyf7T8U/hqdefault.jpg" alt="Emergency Care Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Emergency Care Short</h5>
+                  <a href="https://youtube.com/shorts/fSHdCyf7T8U" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/5FfltMBGuX4', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/5FfltMBGuX4/hqdefault.jpg" alt="Specialist Insight Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Specialist Insight Short</h5>
+                  <a href="https://youtube.com/shorts/5FfltMBGuX4" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/xvWvowcxUW4', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/xvWvowcxUW4/hqdefault.jpg" alt="Patient Care Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Patient Care Short</h5>
+                  <a href="https://youtube.com/shorts/xvWvowcxUW4" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/pQJHW4Qc240', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/pQJHW4Qc240/hqdefault.jpg" alt="Healthcare Feature Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Healthcare Feature Short</h5>
+                  <a href="https://youtube.com/shorts/pQJHW4Qc240" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+
+              <!-- DUPLICATE SET FOR SEAMLESS INFINITE LOOP -->
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbqOptbCYyC/embed" title="Doctor Spotlight Reel" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Doctor Spotlight Reel</h5>
+                  <a href="https://www.instagram.com/reel/DbqOptbCYyC/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DcOOlgyDzUU/embed" title="Clinical Health Post" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Clinical Health Post</h5>
+                  <a href="https://www.instagram.com/p/DcOOlgyDzUU/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/Da2s_VmiSR5/embed" title="Specialist Awareness" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Specialist Awareness</h5>
+                  <a href="https://www.instagram.com/reel/Da2s_VmiSR5/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DcLl8_vj7LJ/embed" title="Health Awareness" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Health Awareness</h5>
+                  <a href="https://www.instagram.com/p/DcLl8_vj7LJ/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/fSHdCyf7T8U', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/fSHdCyf7T8U/hqdefault.jpg" alt="Emergency Care Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Emergency Care Short</h5>
+                  <a href="https://youtube.com/shorts/fSHdCyf7T8U" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/5FfltMBGuX4', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/5FfltMBGuX4/hqdefault.jpg" alt="Specialist Insight Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Specialist Insight Short</h5>
+                  <a href="https://youtube.com/shorts/5FfltMBGuX4" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/xvWvowcxUW4', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/xvWvowcxUW4/hqdefault.jpg" alt="Patient Care Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Patient Care Short</h5>
+                  <a href="https://youtube.com/shorts/xvWvowcxUW4" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/pQJHW4Qc240', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/pQJHW4Qc240/hqdefault.jpg" alt="Healthcare Feature Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Healthcare Feature Short</h5>
+                  <a href="https://youtube.com/shorts/pQJHW4Qc240" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client 2: Madras Coffee House -->
+        <div class="brand-showcase-card" data-client="madrascoffee">
+          <div class="brand-card-header">
+            <div class="brand-info-left">
+              <div class="brand-avatar-badge">
+                <img src="./assets/logo_mch_avatar.png" alt="Madras Coffee House Logo" loading="lazy" />
+              </div>
+              <div class="brand-title-group">
+                <h3>Madras Coffee House</h3>
+                <span class="brand-handle-pill">@madrascoffeehouseofficial • Traditional South Indian F&B</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.instagram.com/madrascoffeehouseofficial/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>Instagram Profile</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://www.youtube.com/@madrascoffeehouseofficial" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <span>YouTube Channel</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mode A: Verified Content (Continuous Infinite Auto-Scroll Marquee) -->
+          <div class="brand-carousel-marquee-wrapper">
+            <div class="brand-carousel-marquee-track">
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbORhHqFZV_/embed" title="Filter Coffee Heritage" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Filter Coffee Heritage</h5>
+                  <a href="https://www.instagram.com/reel/DbORhHqFZV_/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/Db-y1aPgMYa/embed" title="Signature Hot Brew" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Signature Hot Brew</h5>
+                  <a href="https://www.instagram.com/reel/Db-y1aPgMYa/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DZcjy35DtkR/embed" title="Evening Tiffins & Snacks" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Evening Tiffins & Snacks</h5>
+                  <a href="https://www.instagram.com/reel/DZcjy35DtkR/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DcTTwK7CZdE/embed" title="Davarah Cup Pour" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Davarah Cup Pour</h5>
+                  <a href="https://www.instagram.com/p/DcTTwK7CZdE/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DYj4sBDKVqq/embed" title="Tradition & Culture" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Tradition & Culture</h5>
+                  <a href="https://www.instagram.com/p/DYj4sBDKVqq/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/Wy1gsRX_22o', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/Wy1gsRX_22o/hqdefault.jpg" alt="Fresh Brew Pour Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Fresh Brew Pour Short</h5>
+                  <a href="https://youtube.com/shorts/Wy1gsRX_22o" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/FZrMIbf9z40', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/FZrMIbf9z40/hqdefault.jpg" alt="Cafe Highlights Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Cafe Highlights Short</h5>
+                  <a href="https://youtube.com/shorts/FZrMIbf9z40" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/y5v_t7qBIIM', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/y5v_t7qBIIM/hqdefault.jpg" alt="Filter Coffee Aroma Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Filter Coffee Aroma Short</h5>
+                  <a href="https://youtube.com/shorts/y5v_t7qBIIM" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+
+              <!-- DUPLICATE SET FOR SEAMLESS INFINITE LOOP -->
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbORhHqFZV_/embed" title="Filter Coffee Heritage" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Filter Coffee Heritage</h5>
+                  <a href="https://www.instagram.com/reel/DbORhHqFZV_/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/Db-y1aPgMYa/embed" title="Signature Hot Brew" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Signature Hot Brew</h5>
+                  <a href="https://www.instagram.com/reel/Db-y1aPgMYa/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DZcjy35DtkR/embed" title="Evening Tiffins & Snacks" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Evening Tiffins & Snacks</h5>
+                  <a href="https://www.instagram.com/reel/DZcjy35DtkR/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DcTTwK7CZdE/embed" title="Davarah Cup Pour" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Davarah Cup Pour</h5>
+                  <a href="https://www.instagram.com/p/DcTTwK7CZdE/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DYj4sBDKVqq/embed" title="Tradition & Culture" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Tradition & Culture</h5>
+                  <a href="https://www.instagram.com/p/DYj4sBDKVqq/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/Wy1gsRX_22o', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/Wy1gsRX_22o/hqdefault.jpg" alt="Fresh Brew Pour Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Fresh Brew Pour Short</h5>
+                  <a href="https://youtube.com/shorts/Wy1gsRX_22o" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/FZrMIbf9z40', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/FZrMIbf9z40/hqdefault.jpg" alt="Cafe Highlights Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Cafe Highlights Short</h5>
+                  <a href="https://youtube.com/shorts/FZrMIbf9z40" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/y5v_t7qBIIM', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/y5v_t7qBIIM/hqdefault.jpg" alt="Filter Coffee Aroma Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Filter Coffee Aroma Short</h5>
+                  <a href="https://youtube.com/shorts/y5v_t7qBIIM" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client 3: RK Hospitality -->
+        <div class="brand-showcase-card" data-client="rkhospitality">
+          <div class="brand-card-header">
+            <div class="brand-info-left">
+              <div class="brand-avatar-badge">
+                <img src="./assets/logo_rk_avatar.png" alt="RK Hospitality Logo" loading="lazy" />
+              </div>
+              <div class="brand-title-group">
+                <h3>RK Hospitality</h3>
+                <span class="brand-handle-pill">@rkhospitalityofficial • GEM Restaurant, RK Grande, Stardome</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.instagram.com/rkhospitalityofficial/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>Instagram Profile</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+
+            </div>
+          </div>
+
+          <!-- Mode A: Verified Content (Continuous Infinite Auto-Scroll Marquee) -->
+          <div class="brand-carousel-marquee-wrapper">
+            <div class="brand-carousel-marquee-track">
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbqK06QDElL/embed" title="Hospitality Experience" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Hospitality Experience</h5>
+                  <a href="https://www.instagram.com/reel/DbqK06QDElL/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/Dbau46xCe47/embed" title="Resort Ambience" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Resort Ambience</h5>
+                  <a href="https://www.instagram.com/p/Dbau46xCe47/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DcQzt7FjSwm/embed" title="Dining & Celebrations" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Dining & Celebrations</h5>
+                  <a href="https://www.instagram.com/reel/DcQzt7FjSwm/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DbTA1siican/embed" title="Banquet & Events" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Banquet & Events</h5>
+                  <a href="https://www.instagram.com/p/DbTA1siican/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DbDiOMqCWFr/embed" title="Luxury Suites" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Luxury Suites</h5>
+                  <a href="https://www.instagram.com/p/DbDiOMqCWFr/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DbTAJ9-idiT/embed" title="Gourmet Experiences" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Gourmet Experiences</h5>
+                  <a href="https://www.instagram.com/p/DbTAJ9-idiT/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/Da2rdPiiap1/embed" title="Resort Lifestyle" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Resort Lifestyle</h5>
+                  <a href="https://www.instagram.com/p/Da2rdPiiap1/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/Dac5kWDCbmZ/embed" title="Celebration Venue" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Celebration Venue</h5>
+                  <a href="https://www.instagram.com/p/Dac5kWDCbmZ/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+
+              <!-- DUPLICATE SET FOR SEAMLESS INFINITE LOOP -->
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbqK06QDElL/embed" title="Hospitality Experience" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Hospitality Experience</h5>
+                  <a href="https://www.instagram.com/reel/DbqK06QDElL/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/Dbau46xCe47/embed" title="Resort Ambience" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Resort Ambience</h5>
+                  <a href="https://www.instagram.com/p/Dbau46xCe47/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DcQzt7FjSwm/embed" title="Dining & Celebrations" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Dining & Celebrations</h5>
+                  <a href="https://www.instagram.com/reel/DcQzt7FjSwm/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DbTA1siican/embed" title="Banquet & Events" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Banquet & Events</h5>
+                  <a href="https://www.instagram.com/p/DbTA1siican/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DbDiOMqCWFr/embed" title="Luxury Suites" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Luxury Suites</h5>
+                  <a href="https://www.instagram.com/p/DbDiOMqCWFr/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/DbTAJ9-idiT/embed" title="Gourmet Experiences" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Gourmet Experiences</h5>
+                  <a href="https://www.instagram.com/p/DbTAJ9-idiT/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/Da2rdPiiap1/embed" title="Resort Lifestyle" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Resort Lifestyle</h5>
+                  <a href="https://www.instagram.com/p/Da2rdPiiap1/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/p/Dac5kWDCbmZ/embed" title="Celebration Venue" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Celebration Venue</h5>
+                  <a href="https://www.instagram.com/p/Dac5kWDCbmZ/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client 4: Ramnath Bhagavath -->
+        <div class="brand-showcase-card" data-client="ramnath">
+          <div class="brand-card-header">
+            <div class="brand-info-left">
+              <div class="brand-avatar-badge">
+                <img src="./assets/logo_ramnath_avatar.png" alt="Ramnath Bhagavath Logo" loading="lazy" />
+              </div>
+              <div class="brand-title-group">
+                <h3>Ramnath Bhagavath</h3>
+                <span class="brand-handle-pill">@ramnathbhagavath • Personal Branding</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.instagram.com/ramnathbhagavath/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>Instagram Profile</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://www.youtube.com/@ramnathbhagavath" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <span>YouTube Channel</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mode A: Verified Content (Continuous Infinite Auto-Scroll Marquee) -->
+          <div class="brand-carousel-marquee-wrapper">
+            <div class="brand-carousel-marquee-track">
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbfzaP4tgbs/embed" title="Leadership Insights" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Leadership Insights</h5>
+                  <a href="https://www.instagram.com/reel/DbfzaP4tgbs/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbqM9Hbvlbh/embed" title="Entrepreneur Journey" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Entrepreneur Journey</h5>
+                  <a href="https://www.instagram.com/reel/DbqM9Hbvlbh/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbxrHc8SRZ9/embed" title="Business Growth" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Business Growth</h5>
+                  <a href="https://www.instagram.com/reel/DbxrHc8SRZ9/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DaiOW0AP2c7/embed" title="Keynote & Vision" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Keynote & Vision</h5>
+                  <a href="https://www.instagram.com/reel/DaiOW0AP2c7/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbVeoqUybct/embed" title="Industry Perspective" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Industry Perspective</h5>
+                  <a href="https://www.instagram.com/reel/DbVeoqUybct/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/mhRJLekyuBo', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/mhRJLekyuBo/hqdefault.jpg" alt="Success Mindset Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Success Mindset Short</h5>
+                  <a href="https://youtube.com/shorts/mhRJLekyuBo" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/vGhfcJieCGE', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/vGhfcJieCGE/hqdefault.jpg" alt="Brand Strategy Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Brand Strategy Short</h5>
+                  <a href="https://youtube.com/shorts/vGhfcJieCGE" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/HSnsGNj21q4', '_blank')">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/HSnsGNj21q4/hqdefault.jpg" alt="Executive Story Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Executive Story Short</h5>
+                  <a href="https://youtube.com/shorts/HSnsGNj21q4" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+
+              <!-- DUPLICATE SET FOR SEAMLESS INFINITE LOOP -->
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbfzaP4tgbs/embed" title="Leadership Insights" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Leadership Insights</h5>
+                  <a href="https://www.instagram.com/reel/DbfzaP4tgbs/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbqM9Hbvlbh/embed" title="Entrepreneur Journey" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Entrepreneur Journey</h5>
+                  <a href="https://www.instagram.com/reel/DbqM9Hbvlbh/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbxrHc8SRZ9/embed" title="Business Growth" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Business Growth</h5>
+                  <a href="https://www.instagram.com/reel/DbxrHc8SRZ9/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DaiOW0AP2c7/embed" title="Keynote & Vision" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Keynote & Vision</h5>
+                  <a href="https://www.instagram.com/reel/DaiOW0AP2c7/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" aria-hidden="true">
+                <div class="brand-reel-embed-container">
+                  <iframe src="https://www.instagram.com/reel/DbVeoqUybct/embed" title="Industry Perspective" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media" loading="lazy"></iframe>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Industry Perspective</h5>
+                  <a href="https://www.instagram.com/reel/DbVeoqUybct/" target="_blank" rel="noopener">Instagram ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/mhRJLekyuBo', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/mhRJLekyuBo/hqdefault.jpg" alt="Success Mindset Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Success Mindset Short</h5>
+                  <a href="https://youtube.com/shorts/mhRJLekyuBo" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/vGhfcJieCGE', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/vGhfcJieCGE/hqdefault.jpg" alt="Brand Strategy Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Brand Strategy Short</h5>
+                  <a href="https://youtube.com/shorts/vGhfcJieCGE" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+              <div class="brand-unified-media-card" onclick="window.open('https://youtube.com/shorts/HSnsGNj21q4', '_blank')" aria-hidden="true">
+                <div class="brand-short-thumb-container">
+                  <img src="https://i.ytimg.com/vi/HSnsGNj21q4/hqdefault.jpg" alt="Executive Story Short" loading="lazy" />
+                  <div class="brand-short-play-btn">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="#ffffff"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                  </div>
+                </div>
+                <div class="brand-unified-info-bar">
+                  <h5>Executive Story Short</h5>
+                  <a href="https://youtube.com/shorts/HSnsGNj21q4" target="_blank" rel="noopener" onclick="event.stopPropagation()">YouTube ↗</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client 5: Supreme Hospitals -->
+        <div class="brand-showcase-card" data-client="supreme">
+          <div class="brand-card-header">
+            <div class="brand-info-left">
+              <div class="brand-avatar-badge">SH</div>
+              <div class="brand-title-group">
+                <h3>Supreme Hospitals</h3>
+                <span class="brand-handle-pill">@supremehospitalsomr • Multispeciality Healthcare</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.instagram.com/supremehospitalsomr/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>Instagram Profile</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://www.youtube.com/@supremehospitals" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <span>YouTube Channel</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mode A: Verified Content -->
+          <div class="brand-media-grid-2">
+            <!-- Video 1: 24/7 Emergency Care -->
+            <div class="brand-media-card" onclick="openVideoModal('https://www.youtube.com/@supremehospitals', 'Supreme Hospitals Emergency Reel')">
+              <div class="brand-media-card-img-wrap reel-wrap">
+                <span class="brand-media-badge">YouTube Short</span>
+                <div class="brand-play-overlay">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+                <img src="./assets/reel_supreme_1.webp" alt="Supreme Hospital Reel" loading="lazy" />
+              </div>
+              <div class="brand-media-card-info">
+                <h5>24/7 Emergency Care Response</h5>
+                <span>Watch on YouTube ↗</span>
+              </div>
+            </div>
+
+            <!-- Video 2: Doctor Clinical Insights -->
+            <div class="brand-media-card" onclick="openVideoModal('https://www.instagram.com/supremehospitalsomr/', 'Supreme Hospitals Doctor Insights')">
+              <div class="brand-media-card-img-wrap reel-wrap">
+                <span class="brand-media-badge">Instagram Reel</span>
+                <div class="brand-play-overlay">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                </div>
+                <img src="./assets/reel_supreme_2.webp" alt="Supreme Hospital Doctor Insights Reel" loading="lazy" />
+              </div>
+              <div class="brand-media-card-info">
+                <h5>Specialist Doctor Insights</h5>
+                <span>View on Instagram ↗</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client 5: Hercyclopedia (Mode B: Channel Showcase) -->
+        <div class="brand-showcase-card" data-client="hercyclopedia">
+          <div class="brand-card-header">
+            <div class="brand-info-left">
+              <div class="brand-avatar-badge">HC</div>
+              <div class="brand-title-group">
+                <h3>Hercyclopedia</h3>
+                <span class="brand-handle-pill">@hercyclopedia • Women's Health & Wellness</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.instagram.com/hercyclopedia/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>Instagram Profile</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mode B: Channel Showcase Card -->
+          <div class="brand-channel-showcase-mode-b">
+            <p class="brand-mode-b-text">
+              Dedicated digital community empowering women's wellness, health education, and lifestyle awareness campaigns.
+            </p>
+            <div class="brand-mode-b-actions">
+              <a href="https://www.instagram.com/hercyclopedia/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>View Instagram Feed</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client 6: SCSVMV University (Live Playable Videos) -->
+        <div class="brand-showcase-card" data-client="scsvmv">
+          <div class="brand-card-header">
+            <div class="brand-info-left">
+              <div class="brand-avatar-badge">SCS</div>
+              <div class="brand-title-group">
+                <h3>SCSVMV University</h3>
+                <span class="brand-handle-pill">@scsvmvdu • Higher Education & Deemed University</span>
+              </div>
+            </div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <a href="https://www.instagram.com/scsvmvdu/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                <span>Instagram Profile</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+              <a href="https://www.youtube.com/@SCSVMVDU" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                <span>YouTube Channel</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Mode A: Verified Content (Live Playable Videos) -->
+          <div class="brand-media-grid-2">
+            <!-- Embedded Playable YouTube Video 1 -->
+            <div>
+              <div class="brand-video-embed-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/kYJj8UoF-eI" title="SCSVMV University Campus Showcase" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="brand-media-card-info" style="margin-top: 0.5rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+                <h5>Campus Infrastructure & Student Environment</h5>
+                <a href="https://www.youtube.com/watch?v=kYJj8UoF-eI" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.75rem; font-family: var(--font-mono);">Watch on YouTube ↗</a>
+              </div>
+            </div>
+
+            <!-- Embedded Playable YouTube Video 2 -->
+            <div>
+              <div class="brand-video-embed-container">
+                <iframe src="https://www.youtube-nocookie.com/embed/F3a7dOqB3_8" title="SCSVMV Deemed University Overview" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+              </div>
+              <div class="brand-media-card-info" style="margin-top: 0.5rem; border-radius: 8px; border: 1px solid var(--border-subtle);">
+                <h5>SCSVMV Deemed University Overview</h5>
+                <a href="https://www.youtube.com/watch?v=F3a7dOqB3_8" target="_blank" rel="noopener" style="color: var(--text-secondary); text-decoration: none; font-size: 0.75rem; font-family: var(--font-mono);">Watch on YouTube ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. Video Portfolio ("Stories in Motion")
+       ========================================================================= -->
+  <section class="section" id="video" style="background: var(--bg-darker);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Video Production</div>
+        <h2 class="section-title">Stories in <span class="text-gradient-gold">Motion.</span></h2>
+        <p class="section-subtitle">Commercial video production, brand films, hospital facility showcases, and corporate documentaries.</p>
+      </div>
+
+      <div class="video-grid">
+        <!-- Video 1: YouTube coyTnw9m3Xk & RsVyecVHpcM (Page 33) -->
+        <div class="video-card" onclick="openVideoShowcase('v1')">
+          <div class="video-thumb-container">
+            <img src="./assets/page_33.webp" alt="Video Production" class="video-thumb-img" loading="lazy" />
+            <div class="video-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+          <div class="video-card-body">
+            <div class="video-card-platform">YouTube Production (2 Videos)</div>
+            <h4 class="video-card-title">Brand Showcase & Commercial</h4>
+          </div>
+        </div>
+
+        <!-- Video 2: YouTube dMHPc2zpHGM & Yka3ljsJrQQ (Page 37) -->
+        <div class="video-card" onclick="openVideoShowcase('v2')">
+          <div class="video-thumb-container">
+            <img src="./assets/page_37.webp" alt="Video Production" class="video-thumb-img" loading="lazy" />
+            <div class="video-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+          <div class="video-card-body">
+            <div class="video-card-platform">Corporate Film (2 Videos)</div>
+            <h4 class="video-card-title">Executive & Facility Walkthrough</h4>
+          </div>
+        </div>
+
+        <!-- Video 3: YouTube ML--jw--ALk & SGhJ3dkgcVM (Page 38) -->
+        <div class="video-card" onclick="openVideoShowcase('v3')">
+          <div class="video-thumb-container">
+            <img src="./assets/page_38.webp" alt="Healthcare Video" class="video-thumb-img" loading="lazy" />
+            <div class="video-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+          <div class="video-card-body">
+            <div class="video-card-platform">Healthcare Story (2 Videos)</div>
+            <h4 class="video-card-title">Medical Care & Patient Stories</h4>
+          </div>
+        </div>
+
+        <!-- Video 4: YouTube Fzgml5Tc5aE & tZS_TXeljtA (Page 39) -->
+        <div class="video-card" onclick="openVideoShowcase('v4')">
+          <div class="video-thumb-container">
+            <img src="./assets/page_39.webp" alt="Product Film" class="video-thumb-img" loading="lazy" />
+            <div class="video-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+          <div class="video-card-body">
+            <div class="video-card-platform">Commercial Film (2 Videos)</div>
+            <h4 class="video-card-title">Digital Sales & Brand Experience</h4>
+          </div>
+        </div>
+
+        <!-- Video 5: YouTube k44pBI88Clc & wRBWr_kLh5M (Page 40) -->
+        <div class="video-card" onclick="openVideoShowcase('v5')">
+          <div class="video-thumb-container">
+            <img src="./assets/page_40.webp" alt="Innovation Video" class="video-thumb-img" loading="lazy" />
+            <div class="video-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+          <div class="video-card-body">
+            <div class="video-card-platform">Brand Narrative (2 Videos)</div>
+            <h4 class="video-card-title">Podcast & Creative Excellence</h4>
+          </div>
+        </div>
+
+        <!-- Video 6: YouTube 360UMrrKyOM (Page 43) -->
+        <div class="video-card" onclick="openVideoShowcase('v6')">
+          <div class="video-thumb-container">
+            <img src="./assets/page_43.webp" alt="Commercial Film" class="video-thumb-img" loading="lazy" />
+            <div class="video-play-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            </div>
+          </div>
+          <div class="video-card-body">
+            <div class="video-card-platform">Ad Commercial</div>
+            <h4 class="video-card-title">National Campaign Commercial</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. Social Media Advertising (Tata Motors & Carousel Ads)
+       ========================================================================= -->
+  <section class="section" id="advertising">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Paid Media & Ads</div>
+        <h2 class="section-title">Advertising That <span class="text-gradient-gold">Gets Attention.</span></h2>
+        <p class="section-subtitle">Multi-format advertising campaigns engineered for maximum click-through rates and high-intent customer acquisition.</p>
+      </div>
+
+      <!-- Featured Ad Client: Tata Motors (Page 47) -->
+      <div class="ads-highlight-card">
+        <div class="ads-highlight-content">
+          <span class="section-tag">Featured Client Campaign</span>
+          <h3>Tata Motors Advertising</h3>
+          <p>
+            High-impact digital ad creative and targeted performance marketing for Tata Motors, combining sleek automotive visual aesthetics with strong value messaging.
+          </p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-outline-gold btn-sm" onclick="openLightbox('./assets/page_47.webp', 'Tata Motors Advertising Campaign')">View Ad Visual</button>
+            <button class="btn btn-secondary btn-sm" onclick="openContactModal('Social Media Advertising')">Discuss Ad Strategy</button>
+          </div>
+        </div>
+        <div class="ads-highlight-visual" onclick="openLightbox('./assets/page_47.webp', 'Tata Motors Campaign')">
+          <img src="./assets/page_47.webp" alt="Tata Motors Campaign" style="cursor: pointer; width: 100%;" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Carousel Ads & Video Ads Grid (Pages 45, 46, 48, 49, 50) -->
+      <div class="ads-campaign-grid">
+        <div class="glass-card" style="padding: 1.5rem; cursor: pointer;" onclick="openLightbox('./assets/page_45.webp', 'Carousel Ads Campaign')">
+          <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Carousel Ads</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Multi-slide narrative ad formats with structured visual sequences.</p>
+          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle);">
+            <img src="./assets/page_45.webp" alt="Carousel Ads" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 1.5rem; cursor: pointer;" onclick="openLightbox('./assets/page_48.webp', 'Video Ads Showcase')">
+          <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Video Ads</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Short-form dynamic motion creatives engineered for feed scroll-stopping power.</p>
+          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle);">
+            <img src="./assets/page_48.webp" alt="Video Ads" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="glass-card" style="padding: 1.5rem; cursor: pointer;" onclick="openLightbox('./assets/page_50.webp', 'Campaign Performance Metrics')">
+          <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Campaign Performance</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">End-to-end metrics tracking reach, CTR, conversion value, and audience insights.</p>
+          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle);">
+            <img src="./assets/page_50.webp" alt="Ad Metrics" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- =========================================================================
+       11. Traditional Advertising (Billboards & Newspaper Ads)
+       ========================================================================= -->
+  <section class="section" id="traditional">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Omnichannel Reach</div>
+        <h2 class="section-title">Traditional <span class="text-gradient-gold">Advertising</span></h2>
+        <p class="section-subtitle">"From screens to streets, we build brand visibility everywhere."</p>
+      </div>
+
+      <div class="traditional-split-grid">
+        <!-- Billboards (Page 83) -->
+        <div class="traditional-card">
+          <div class="traditional-header">
+            <h3>Outdoor Billboards</h3>
+            <p>Oversized highway and prime urban billboard creatives designed for immediate recognition and impact.</p>
+          </div>
+          <div class="traditional-gallery">
+            <div class="traditional-img-wrapper" onclick="openLightbox('./assets/page_83.webp', 'Outdoor Billboards Advertising')">
+              <img src="./assets/page_83.webp" alt="Outdoor Billboards" style="cursor: pointer; width: 100%;" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Newspaper Ads (Page 84) -->
+        <div class="traditional-card">
+          <div class="traditional-header">
+            <h3>Newspaper Advertisements</h3>
+            <p>High-circulation national and regional print newspaper ads combining editorial precision with striking brand visuals.</p>
+          </div>
+          <div class="traditional-gallery">
+            <div class="traditional-img-wrapper" onclick="openLightbox('./assets/page_84.webp', 'Newspaper Advertisements')">
+              <img src="./assets/page_84.webp" alt="Newspaper Advertisements" style="cursor: pointer; width: 100%;" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. SEO Portfolio ("Search Visibility That Performs")
+       ========================================================================= -->
+  <section class="section" id="seo" style="background: var(--bg-darker);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Search Engine Optimization</div>
+        <h2 class="section-title">Search Visibility <span class="text-gradient-gold">That Performs.</span></h2>
+        <p class="section-subtitle">Data-driven search engine dominance documented from our client engagements.</p>
+      </div>
+
+      <!-- SEO Framework Pillars -->
+      <div class="seo-features-grid">
+        <div class="seo-pill-card">
+          <div class="seo-pill-icon">&#x2713;</div>
+          <div class="seo-pill-text">Technical SEO & Crawl Fixes</div>
+        </div>
+        <div class="seo-pill-card">
+          <div class="seo-pill-icon">&#x2713;</div>
+          <div class="seo-pill-text">Core Web Vitals Optimization</div>
+        </div>
+        <div class="seo-pill-card">
+          <div class="seo-pill-icon">&#x2713;</div>
+          <div class="seo-pill-text">Content Strategy & Keyword Mapping</div>
+        </div>
+        <div class="seo-pill-card">
+          <div class="seo-pill-icon">&#x2713;</div>
+          <div class="seo-pill-text">Google Business Profile (GBP)</div>
+        </div>
+      </div>
+
+      <!-- Two Large SEO Case Studies -->
+      <div class="seo-case-grid">
+
+        <!-- Case 1: Supreme Hospital (Pages 14, 16, 18, 26) -->
+        <div class="seo-case-card">
+          <div class="seo-case-header">
+            <div>
+              <span class="section-tag" style="margin-bottom: 0.4rem;">Healthcare SEO</span>
+              <h3 class="seo-case-title">Supreme Hospital</h3>
+            </div>
+            <span style="font-size: 0.85rem; color: var(--gold-light); font-family: var(--font-mono);">OMR, Chennai</span>
+          </div>
+
+          <ul class="seo-case-scope-list">
+            <li class="seo-scope-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Fixed Crawl & Indexing Issues</span>
+            </li>
+            <li class="seo-scope-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Improved Core Web Vitals</span>
+            </li>
+            <li class="seo-scope-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Top Performing Pages Architecture</span>
+            </li>
+            <li class="seo-scope-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>GA4 Analytics Integration</span>
+            </li>
+          </ul>
+
+          <div class="seo-preview-gallery">
+            <div class="seo-img-thumb" onclick="openLightbox('./assets/page_14.webp', 'Supreme Hospital - Technical SEO & Indexing')">
+              <img src="./assets/page_14.webp" alt="Supreme Hospital Technical SEO" loading="lazy" />
+            </div>
+            <div class="seo-img-thumb" onclick="openLightbox('./assets/page_16.webp', 'Supreme Hospital - Core Web Vitals')">
+              <img src="./assets/page_16.webp" alt="Supreme Hospital Core Web Vitals" loading="lazy" />
+            </div>
+            <div class="seo-img-thumb" onclick="openLightbox('./assets/page_18.webp', 'Supreme Hospital - Top Performing Pages')">
+              <img src="./assets/page_18.webp" alt="Supreme Hospital Top Pages" loading="lazy" />
+            </div>
+            <div class="seo-img-thumb" onclick="openLightbox('./assets/page_26.webp', 'Supreme Hospital - GA4 Performance')">
+              <img src="./assets/page_26.webp" alt="Supreme Hospital GA4" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Case 2: Healing Earth (Pages 15, 17, 19, 24, 27) -->
+        <div class="seo-case-card">
+          <div class="seo-case-header">
+            <div>
+              <span class="section-tag" style="margin-bottom: 0.4rem;">Ayurveda & Wellness</span>
+              <h3 class="seo-case-title">Healing Earth</h3>
+            </div>
+            <a href="https://www.google.com/search?q=Healing+Earth+Ayurveda+Hospital+Bangalore%2C+Prithvi+Health+Care+PVT+LTD." target="_blank" rel="noopener" class="btn btn-outline-gold btn-sm">
+              <span>View On Google</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+
+          <ul class="seo-case-scope-list">
+            <li class="seo-scope-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Fixed Crawl & Indexing Bottlenecks</span>
+            </li>
+            <li class="seo-scope-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Core Web Vitals Metric Boost</span>
+            </li>
+            <li class="seo-scope-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Google Business Profile Optimization</span>
+            </li>
+            <li class="seo-scope-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <span>Google Search Console (GSC) Growth</span>
+            </li>
+          </ul>
+
+          <div class="seo-preview-gallery">
+            <div class="seo-img-thumb" onclick="openLightbox('./assets/page_15.webp', 'Healing Earth - Indexing Audit')">
+              <img src="./assets/page_15.webp" alt="Healing Earth Indexing" loading="lazy" />
+            </div>
+            <div class="seo-img-thumb" onclick="openLightbox('./assets/page_17.webp', 'Healing Earth - Core Web Vitals')">
+              <img src="./assets/page_17.webp" alt="Healing Earth Core Web Vitals" loading="lazy" />
+            </div>
+            <div class="seo-img-thumb" onclick="openLightbox('./assets/page_24.webp', 'Healing Earth - Google Business Profile Optimization')">
+              <img src="./assets/page_24.webp" alt="Healing Earth GBP" loading="lazy" />
+            </div>
+            <div class="seo-img-thumb" onclick="openLightbox('./assets/page_27.webp', 'Healing Earth - GA4 & GSC Metrics')">
+              <img src="./assets/page_27.webp" alt="Healing Earth GA4" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. Website Development Portfolio ("Selected Digital Experiences")
+       ========================================================================= -->
+  <section class="section" id="web-development">
+    <div id="work" style="position: absolute; top: -80px;"></div>
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">Website Development Portfolio</div>
+        <h2 class="section-title">Website Development & <span class="text-gradient-gold">Digital Platforms</span></h2>
+        <p class="section-subtitle">High-performance corporate websites, healthcare portals, e-commerce, and bespoke web platforms engineered by Reach Skyline.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All Websites (15)</button>
+        <button class="filter-btn" data-filter="healthcare">Healthcare (5)</button>
+        <button class="filter-btn" data-filter="corporate">Corporate & Marine (4)</button>
+        <button class="filter-btn" data-filter="lifestyle">Lifestyle & Design (4)</button>
+        <button class="filter-btn" data-filter="hospitality">Hospitality (1)</button>
+        <button class="filter-btn" data-filter="nonprofit">Non-Profit (1)</button>
+      </div>
+
+      <!-- Portfolio Grid with All 15 Official Websites -->
+      <div class="portfolio-grid">
+        
+        <!-- 1. Healing Earth (https://healingearth.co.in/) -->
+        <div class="project-card" data-category="healthcare" onclick="openProjectModal('healingearth')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Healthcare / Ayurveda</span>
+            <img src="./assets/site_healingearth.webp" alt="Healing Earth Ayurveda Hospital" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Healing Earth</h3>
+            <p class="project-card-desc">Multi-speciality Ayurvedic hospital & wellness centre in Bangalore offering holistic therapies with modern clinical excellence.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">healingearth.co.in</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Supreme Hospital (https://www.supremehospitals.in/) -->
+        <div class="project-card" data-category="healthcare" onclick="openProjectModal('supremehospital')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Healthcare / Tertiary Care</span>
+            <img src="./assets/site_supremehospital.webp" alt="Supreme Hospital" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Supreme Hospital</h3>
+            <p class="project-card-desc">Premier multi-speciality tertiary care institution in OMR, Chennai with specialized surgical suites and doctor booking funnels.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">supremehospitals.in</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Brigantine Engineering (https://www.brigantineengineering.com.au/) -->
+        <div class="project-card" data-category="corporate" onclick="openProjectModal('brigantine')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Maritime Engineering</span>
+            <img src="./assets/site_brigantine.webp" alt="Brigantine Engineering" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Brigantine Engineering</h3>
+            <p class="project-card-desc">Premier maritime, marine engineering, and container repair services across Australia with technical specifications portal.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">brigantineengineering.com.au</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Bilander Ship Management (https://bilandershipmanagement.com/) -->
+        <div class="project-card" data-category="corporate" onclick="openProjectModal('bilandership')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Maritime Logistics</span>
+            <img src="./assets/site_bilander.webp" alt="Bilander Ship Management" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Bilander Ship Management</h3>
+            <p class="project-card-desc">International vessel operations, global crew management, and maritime compliance portal for commercial shipping fleets.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">bilandershipmanagement.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Chennai GEM Hospital (https://chennaigemhospital.in/) -->
+        <div class="project-card" data-category="healthcare" onclick="openProjectModal('chennaigem')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Gastroenterology & Surgery</span>
+            <img src="./assets/site_chennaigem.webp" alt="Chennai GEM Hospital" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Chennai GEM Hospital</h3>
+            <p class="project-card-desc">Premier institute for Gastroenterology, Laparoscopic Surgery, and Robotic Surgery delivering digestive healthcare excellence.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">chennaigemhospital.in</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Madras Coffee House (https://madrascoffeehouse.com/) -->
+        <div class="project-card" data-category="hospitality" onclick="openProjectModal('madrascoffee')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Hospitality & F&B</span>
+            <img src="./assets/site_madrascoffee.webp" alt="Madras Coffee House" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Madras Coffee House</h3>
+            <p class="project-card-desc">Iconic South Indian filter coffee global chain with 160+ stores worldwide, celebrating rich tradition in every cup.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">madrascoffeehouse.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. D-Medva (https://dmedva.com/) -->
+        <div class="project-card" data-category="healthcare" onclick="openProjectModal('dmedva')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Healthcare Marketing</span>
+            <img src="./assets/site_dmedva.webp" alt="D-Medva" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">D-Medva</h3>
+            <p class="project-card-desc">Leading healthcare marketing platform in India delivering strategic, ethical, and creative medical communication benchmark solutions.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">dmedva.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Universe Book of World Records (https://universebookofworldrecords.com/) -->
+        <div class="project-card" data-category="lifestyle" onclick="openProjectModal('universeworldrecords')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Global Records Portal</span>
+            <img src="./assets/site_universeworldrecords.webp" alt="Universe Book of World Records" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Universe Book of World Records</h3>
+            <p class="project-card-desc">Official international portal for adjudicating, certifying, and publishing extraordinary world records and human achievements.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">universebookofworldrecords.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Kalalaya International (https://kalalayaintl.com/) -->
+        <div class="project-card" data-category="lifestyle" onclick="openProjectModal('kalalaya')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Arts & Dance Academy</span>
+            <img src="./assets/site_kalalaya.webp" alt="Kalalaya International" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Kalalaya International</h3>
+            <p class="project-card-desc">Renowned international academy promoting Indian classical dance, fine arts, music, and cultural heritage education across borders.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">kalalayaintl.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Vee Shapes Designers (https://veeshapesdesigners.com/) -->
+        <div class="project-card" data-category="lifestyle" onclick="openProjectModal('veeshapes')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Interior & Architecture</span>
+            <img src="./assets/site_veeshapes.webp" alt="Vee Shapes Designers" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Vee Shapes Designers</h3>
+            <p class="project-card-desc">Interior design studio and architectural planning firm specializing in luxury residential, corporate, and commercial spaces.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">veeshapesdesigners.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. SPR Consultech (https://sprconsultech.com/) -->
+        <div class="project-card" data-category="corporate" onclick="openProjectModal('sprconsultech')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Corporate Tech Advisory</span>
+            <img src="./assets/site_sprconsultech.webp" alt="SPR Consultech" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">SPR Consultech</h3>
+            <p class="project-card-desc">Driving business transformation through innovative technology and customized strategies with 400+ multidisciplinary experts.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">sprconsultech.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Kind Kids Crew (https://www.kindkidscrew.org/) -->
+        <div class="project-card" data-category="nonprofit" onclick="openProjectModal('kindkidscrew')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Non-Profit & Community</span>
+            <img src="./assets/site_kindkidscrew.webp" alt="Kind Kids Crew" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Kind Kids Crew</h3>
+            <p class="project-card-desc">Non-profit organization dedicated to instilling values of kindness and community service in youth through charitable initiatives.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">kindkidscrew.org</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13. Be Well Hospital (https://www.bewellhospitals.in/) -->
+        <div class="project-card" data-category="healthcare" onclick="openProjectModal('bewell')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Hospital Network</span>
+            <img src="./assets/site_bewell.webp" alt="Be Well Hospitals" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Be Well Hospitals</h3>
+            <p class="project-card-desc">Redefining healthcare across South India with accessible, affordable, transparent pricing and patient-centric clinic networks.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">bewellhospitals.in</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14. Hercyclopedia (https://hercyclopedia.com/) -->
+        <div class="project-card" data-category="lifestyle" onclick="openProjectModal('hercyclopedia')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Women Platform</span>
+            <img src="./assets/site_hercyclopedia.webp" alt="Hercyclopedia" class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">Hercyclopedia</h3>
+            <p class="project-card-desc">Empowerment and digital health knowledge platform dedicated to women's wellness, leadership, career, and holistic development.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">hercyclopedia.com</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15. SPR & Co. (https://sprandco.com/) -->
+        <div class="project-card" data-category="corporate" onclick="openProjectModal('sprandco')">
+          <div class="project-thumbnail-wrapper">
+            <span class="project-overlay-badge">Corporate Innovation</span>
+            <img src="./assets/site_sprandco.webp" alt="SPR & Co." class="project-thumbnail" loading="lazy" />
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-client-name">SPR & Co.</h3>
+            <p class="project-card-desc">Founded in 2002, delivering bespoke strategic consulting, financial advisory, and business innovation with 400+ experts.</p>
+            <div class="project-card-footer">
+              <span class="project-view-link">View Case Study &rarr;</span>
+              <span style="font-size: 0.75rem; color: var(--gold-light); font-family: var(--font-mono);">sprandco.com</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       12. Process Section (5-Stage Agency Workflow)
+       ========================================================================= -->
+  <section class="section" id="process" style="background: var(--bg-darker);">
+    <div class="container">
+      <div class="section-header text-center">
+        <div class="section-tag">How We Work</div>
+        <h2 class="section-title">The <span class="text-gradient-gold">Agency Process</span></h2>
+        <p class="section-subtitle">A proven, strategic framework that transforms brand ambitions into measurable digital growth.</p>
+      </div>
+
+      <div class="process-steps-grid">
+        <div class="process-step-card">
+          <div class="process-step-num">01</div>
+          <h3 class="process-step-title">Discover</h3>
+          <p class="process-step-desc">In-depth research of brand identity, audience dynamics, competitors, and growth objectives.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">02</div>
+          <h3 class="process-step-title">Strategize</h3>
+          <p class="process-step-desc">Formulating AI-assisted content calendars, technical SEO roadmaps, and paid acquisition funnels.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">03</div>
+          <h3 class="process-step-title">Create</h3>
+          <p class="process-step-desc">Developing 100% original, copyright-safe visuals, video films, web interfaces, and copy.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">04</div>
+          <h3 class="process-step-title">Launch</h3>
+          <p class="process-step-desc">Flawless omnichannel deployment across search engines, social channels, and ad networks.</p>
+        </div>
+
+        <div class="process-step-card">
+          <div class="process-step-num">05</div>
+          <h3 class="process-step-title">Optimize</h3>
+          <p class="process-step-desc">Continuous monitoring, Core Web Vitals refinement, A/B testing, and revenue scaling.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       13. Final Dramatic CTA Section
+       ========================================================================= -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="cta-box">
+        <div class="section-tag" style="margin-bottom: 1rem;">Let's Connect</div>
+        <h2 class="cta-headline">Ready to Reach <span class="text-gradient-gold">Higher?</span></h2>
+        <p class="cta-subtext">Let's build your next digital growth story. Our team is available 24/7 for consultation and project execution.</p>
+        <div class="cta-actions">
+          <button class="btn btn-primary" onclick="openContactModal()">
+            <span>Start a Project</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+          <a href="mailto:Solutions@reachskyline.com" class="btn btn-secondary">
+            <span>Email Solutions@reachskyline.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div>
+          <a href="#hero" class="nav-brand" style="margin-bottom: 0.75rem;">
+            <img src="./assets/reach_skyline_logo_dark.png" alt="Reach Skyline" class="footer-logo-img" />
+          </a>
+          <div class="footer-brand-tagline">Design. Content. Strategy. Results.</div>
+          <p class="footer-brand-text">
+            Established in 2016. AI-powered creative and digital marketing agency with 25+ professionals partnering with 50+ leading brands worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#social">Social Media</a></li>
+            <li><a href="#video">Video & Ads</a></li>
+            <li><a href="#seo">SEO Performance</a></li>
+            <li><a href="#web-development">Web Development</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services">Website Development</a></li>
+            <li><a href="#services">SEO Optimization</a></li>
+            <li><a href="#services">Social Media Marketing</a></li>
+            <li><a href="#video">Video Marketing</a></li>
+            <li><a href="#advertising">Paid Advertising</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Direct Contact</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold-primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <a href="mailto:Solutions@reachskyline.com">Solutions@reachskyline.com</a>
+          </div>
+          <div class="footer-contact-item" style="color: var(--text-muted); font-size: 0.85rem;">
+            <span>Available 24/7 for Communication & Support</span>
+          </div>
+          <div style="margin-top: 1rem;">
+            <button class="btn btn-outline-gold btn-sm" onclick="openContactModal()">Send Inquiry</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2016 - 2026 Reach Skyline. Creative & Digital Marketing Team. All Rights Reserved.</div>
+        <div style="font-family: var(--font-mono); color: var(--gold-light);">
+          Creative. Digital. Performance.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       15. Interactive Modals
+       ========================================================================= -->
+
+  <!-- Project Case Study Modal -->
+  <div class="modal-overlay" id="projectModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div id="projectModalBody"></div>
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="modal-overlay" id="videoModal">
+    <div class="modal-container video-modal-container">
+      <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div id="videoPlayerContainer"></div>
+    </div>
+  </div>
+
+  <!-- Image Lightbox Modal -->
+  <div class="modal-overlay" id="imageLightbox">
+    <div class="modal-container lightbox-container">
+      <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <img id="lightboxImg" src="" alt="Enlarged Visual" class="lightbox-img" />
+      <div id="lightboxCaption" style="margin-top: 1rem; color: var(--gold-light); font-family: var(--font-mono); font-size: 0.9rem;"></div>
+    </div>
+  </div>
+
+  <!-- Contact Inquiry Modal -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-container" style="max-width: 650px;">
+      <button class="modal-close-btn" onclick="closeAllModals()" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="contact-form">
+        <div class="section-tag" style="margin-bottom: 0.75rem;">Get in Touch</div>
+        <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Start Your Next Project</h2>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.75rem;">
+          Connect directly with the Reach Skyline team at <strong class="text-gold">Solutions@reachskyline.com</strong>.
+        </p>
+
+        <form id="projectInquiryForm">
+          <div class="form-group">
+            <label class="form-label" for="contactName">Your Name / Organization</label>
+            <input type="text" id="contactName" class="form-control" placeholder="e.g. Sarah Jenkins" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contactEmail">Email Address</label>
+            <input type="email" id="contactEmail" class="form-control" placeholder="name@company.com" required />
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contactService">Service Required</label>
+            <select id="contactService" class="form-control" style="background: var(--bg-surface); color: var(--text-primary);">
+              <option value="Website Development">Website Development</option>
+              <option value="SEO">SEO (Search Engine Optimization)</option>
+              <option value="Social Media Marketing">Social Media Marketing</option>
+              <option value="Video Marketing">Video Marketing</option>
+              <option value="Social Media Advertising">Social Media Advertising</option>
+              <option value="Reels & Shorts">Reels & Shorts</option>
+              <option value="Traditional Advertising">Traditional Advertising</option>
+              <option value="Full Digital Transformation">Full Digital Transformation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="contactMessage">Project Details & Goals</label>
+            <textarea id="contactMessage" class="form-control" rows="4" placeholder="Tell us about your brand, timeline, and requirements..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <span>Send Project Inquiry</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
