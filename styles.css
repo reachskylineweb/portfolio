@@ -1619,6 +1619,18 @@ h1, h2, h3, h4, h5, h6 {
     flex: 0 0 240px;
     width: 240px;
   }
+
+  /* Cut 50% RAM on mobile by disabling duplicate background iframe engines */
+  .brand-unified-media-card[aria-hidden="true"] .brand-reel-embed-container iframe {
+    display: none !important;
+  }
+
+  .brand-unified-media-card[aria-hidden="true"] .brand-reel-embed-container {
+    background: linear-gradient(145deg, #1e1e24, #0f172a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .brand-carousel-marquee-track .brand-unified-media-card {
