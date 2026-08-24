@@ -9,32 +9,48 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
+  let isTicking = false;
+
+  const updateScrollState = () => {
+    const scrollY = window.scrollY;
+    if (scrollY > 40) {
+      if (!navbar.classList.contains('scrolled')) navbar.classList.add('scrolled');
     } else {
-      navbar.classList.remove('scrolled');
+      if (navbar.classList.contains('scrolled')) navbar.classList.remove('scrolled');
     }
 
-    // Scroll spy
+    // Scroll spy with fast break
     let current = '';
-    const scrollPos = window.scrollY + 160;
+    const scrollPos = scrollY + 160;
 
-    sections.forEach(section => {
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
       const sectionTop = section.offsetTop;
       const sectionHeight = section.offsetHeight;
       if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
         current = section.getAttribute('id');
+        break;
       }
-    });
+    }
 
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-  });
+    if (current) {
+      navLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${current}`) {
+          if (!link.classList.contains('active')) link.classList.add('active');
+        } else {
+          if (link.classList.contains('active')) link.classList.remove('active');
+        }
+      });
+    }
+    isTicking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(updateScrollState);
+      isTicking = true;
+    }
+  }, { passive: true });
 
   // 2. Mobile Menu Toggle
   const mobileToggle = document.getElementById('mobileToggle');
