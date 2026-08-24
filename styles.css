@@ -1628,12 +1628,21 @@ h1, h2, h3, h4, h5, h6 {
     will-change: auto !important;
   }
 
-  /* 74vw width makes the next card 26% clearly visible peeking from the right edge */
+  /* 65% width ensures the active post takes 65% and the next post is 35% visibly peeking */
   .brand-carousel-marquee-track .brand-unified-media-card {
-    flex: 0 0 74vw !important;
-    max-width: 270px !important;
+    flex: 0 0 65vw !important;
+    max-width: 260px !important;
     scroll-snap-align: start;
     contain: content;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  }
+
+  /* When hovered or touched, the card elevates smoothly into full clear visibility */
+  .brand-carousel-marquee-track .brand-unified-media-card:hover,
+  .brand-carousel-marquee-track .brand-unified-media-card:active {
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+    z-index: 5;
   }
 
   /* Hide duplicate set on mobile for clean, authentic 8-card swipe */
