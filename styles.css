@@ -1605,31 +1605,35 @@ h1, h2, h3, h4, h5, h6 {
   .brand-carousel-marquee-wrapper {
     mask-image: none !important;
     -webkit-mask-image: none !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    touch-action: pan-y;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+  }
+
+  .brand-carousel-marquee-wrapper::-webkit-scrollbar {
+    display: none;
   }
 
   .brand-carousel-marquee-track {
-    animation-duration: 45s;
-    touch-action: pan-y;
+    animation: none !important;
+    width: max-content !important;
+    display: flex !important;
+    gap: 1rem !important;
+    padding: 0 0.5rem;
   }
 
   .brand-carousel-marquee-track .brand-unified-media-card {
-    flex: 0 0 240px;
-    width: 240px;
+    flex: 0 0 250px !important;
+    width: 250px !important;
+    scroll-snap-align: center;
+    contain: content;
   }
 
-  /* Cut 50% RAM on mobile by disabling duplicate background iframe engines */
-  .brand-unified-media-card[aria-hidden="true"] .brand-reel-embed-container iframe {
+  /* Hide duplicate set on mobile to give 100% silky smooth 120Hz native touch scroll */
+  .brand-unified-media-card[aria-hidden="true"] {
     display: none !important;
-  }
-
-  .brand-unified-media-card[aria-hidden="true"] .brand-reel-embed-container {
-    background: linear-gradient(145deg, #1e1e24, #0f172a);
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
