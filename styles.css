@@ -1605,37 +1605,31 @@ h1, h2, h3, h4, h5, h6 {
   .brand-carousel-marquee-wrapper {
     mask-image: none !important;
     -webkit-mask-image: none !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scroll-snap-type: x mandatory;
-    scroll-padding: 0 1rem;
-    padding: 0.5rem 1rem 1rem 1rem !important;
-    scrollbar-width: none;
-  }
-
-  .brand-carousel-marquee-wrapper::-webkit-scrollbar {
-    display: none;
+    overflow-x: hidden !important;
+    padding: 0.5rem 0 !important;
   }
 
   .brand-carousel-marquee-track {
-    animation: none !important;
+    animation: autoScrollMarquee 58s linear infinite !important;
+    animation-play-state: paused; /* Initially paused until scrolled into viewport */
     width: max-content !important;
     display: flex !important;
-    gap: 0.85rem !important;
-    padding: 0 !important;
+    gap: 1rem !important;
+    will-change: transform;
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
   }
 
-  /* 76vw ensures the next card is 24% visible peeking from the right edge */
   .brand-carousel-marquee-track .brand-unified-media-card {
-    flex: 0 0 76vw !important;
-    max-width: 275px !important;
-    scroll-snap-align: start;
+    flex: 0 0 245px !important;
+    width: 245px !important;
     contain: content;
   }
 
-  /* Hide duplicate set on mobile to give 100% silky smooth 120Hz native touch scroll */
+  /* Duplicate loop set active on mobile for seamless infinite scrolling */
   .brand-unified-media-card[aria-hidden="true"] {
-    display: none !important;
+    display: block !important;
   }
 }
 
