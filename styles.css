@@ -1584,10 +1584,34 @@ h1, h2, h3, h4, h5, h6 {
   width: max-content;
   animation: autoScrollMarquee 38s linear infinite;
   padding: 0.5rem 0;
+  will-change: transform;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .brand-carousel-marquee-track:hover {
   animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .brand-carousel-marquee-wrapper {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+  }
+
+  .brand-carousel-marquee-track {
+    animation-duration: 45s;
+    touch-action: pan-y;
+  }
+
+  .brand-carousel-marquee-track .brand-unified-media-card {
+    flex: 0 0 240px;
+    width: 240px;
+  }
 }
 
 .brand-carousel-marquee-track .brand-unified-media-card {
