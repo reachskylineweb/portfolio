@@ -1602,34 +1602,43 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.98) !important;
   }
 
+  /* Normal, lag-free horizontal touch swipe with visible peeking card */
   .brand-carousel-marquee-wrapper {
     mask-image: none !important;
     -webkit-mask-image: none !important;
-    overflow-x: hidden !important;
-    padding: 0.5rem 0 !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 1rem;
+    padding: 0.5rem 1rem 1.25rem 1rem !important;
+    scrollbar-width: none;
+  }
+
+  .brand-carousel-marquee-wrapper::-webkit-scrollbar {
+    display: none;
   }
 
   .brand-carousel-marquee-track {
-    animation: autoScrollMarquee 58s linear infinite !important;
-    animation-play-state: paused; /* Initially paused until scrolled into viewport */
+    animation: none !important;
     width: max-content !important;
     display: flex !important;
-    gap: 1rem !important;
-    will-change: transform;
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    gap: 0.85rem !important;
+    padding: 0 !important;
+    transform: none !important;
+    will-change: auto !important;
   }
 
+  /* 74vw width makes the next card 26% clearly visible peeking from the right edge */
   .brand-carousel-marquee-track .brand-unified-media-card {
-    flex: 0 0 245px !important;
-    width: 245px !important;
+    flex: 0 0 74vw !important;
+    max-width: 270px !important;
+    scroll-snap-align: start;
     contain: content;
   }
 
-  /* Duplicate loop set active on mobile for seamless infinite scrolling */
+  /* Hide duplicate set on mobile for clean, authentic 8-card swipe */
   .brand-unified-media-card[aria-hidden="true"] {
-    display: block !important;
+    display: none !important;
   }
 }
 
