@@ -3658,6 +3658,10 @@ h1, h2, h3, h4, h5, h6 {
    Clips out Instagram's injected iframe header (avatar, 1 follower, View Profile)
    for Hercyclopedia exclusively while preserving all other brand showcases.
    -------------------------------------------------------------------------- */
+.brand-showcase-card[data-client="hercyclopedia"] {
+  padding-bottom: 1.75rem !important;
+}
+
 .brand-showcase-card[data-client="hercyclopedia"] .brand-unified-media-card {
   height: auto !important;
   min-height: auto !important;
