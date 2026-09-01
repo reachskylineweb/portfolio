@@ -2579,6 +2579,7 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 3.5rem;
+  align-items: stretch;
 }
 
 .saas-product-card {
@@ -2588,6 +2589,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 2.25rem;
   display: flex;
   flex-direction: column;
+  height: 100%;
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
   transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.35s ease;
   position: relative;
@@ -2984,6 +2986,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
   color: var(--text-primary);
   margin-bottom: 0.35rem;
+  min-height: 1.9rem;
 }
 
 .saas-card-tagline {
@@ -2991,6 +2994,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: #0f172a;
   margin-bottom: 0.75rem;
+  min-height: 2.8rem;
+  display: flex;
+  align-items: flex-start;
 }
 
 .saas-card-desc {
@@ -2998,13 +3004,16 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  flex: 1;
+  min-height: 5.4rem;
 }
 
 .saas-features-box {
   margin-bottom: 1.75rem;
   border-top: 1px solid var(--border-subtle);
   padding-top: 1rem;
+  min-height: 138px;
+  display: flex;
+  flex-direction: column;
 }
 
 .saas-features-label {
