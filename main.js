@@ -434,19 +434,19 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     v3: {
-      category: "Healthcare Story (2 Videos)",
-      title: "Medical Care & Patient Stories",
-      description: "Patient experience storytelling and healthcare marketing campaign films tailored for leading hospital partners.",
+      category: "Brand & Agency Story (2 Videos)",
+      title: "Brand Transformation & Development Services",
+      description: "Reach Skyline brand film showcase spotlighting customer experience, web development services, and strategic brand transformation.",
       videos: [
         {
           id: "ML--jw--ALk",
-          title: "Video 1: Patient-Centric Healthcare Approach",
+          title: "Revolutionize Your Customer Experience: The Reach Skyline Approach to Service Excellence",
           url: "https://www.youtube.com/watch?v=ML--jw--ALk",
           thumb: "https://img.youtube.com/vi/ML--jw--ALk/hqdefault.jpg"
         },
         {
           id: "SGhJ3dkgcVM",
-          title: "Video 2: Customized Healthcare Marketing Strategy",
+          title: "From Strategy to Creativity: How Reach Skyline Transforms Your Brand",
           url: "https://www.youtube.com/watch?v=SGhJ3dkgcVM",
           thumb: "https://img.youtube.com/vi/SGhJ3dkgcVM/hqdefault.jpg"
         }
