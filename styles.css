@@ -3650,3 +3650,23 @@ h1, h2, h3, h4, h5, h6 {
 .seo-evidence-desc strong {
   color: var(--text-primary);
 }
+
+
+/* --------------------------------------------------------------------------
+   Hercyclopedia Header Shield:
+   Clips out Instagram's injected iframe header (avatar, 1 follower, View Profile)
+   for Hercyclopedia exclusively while preserving all other brand showcases.
+   -------------------------------------------------------------------------- */
+.brand-showcase-card[data-client="hercyclopedia"] .brand-reel-embed-container {
+  overflow: hidden !important;
+  position: relative;
+  height: 330px;
+}
+
+.brand-showcase-card[data-client="hercyclopedia"] .brand-reel-embed-container iframe {
+  margin-top: -55px !important;
+  height: 395px !important;
+  width: 100% !important;
+  border: none !important;
+  display: block !important;
+}
