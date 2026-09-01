@@ -2611,6 +2611,20 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--border-subtle);
   transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
   background: #ffffff;
+  position: relative;
+}
+
+.saas-preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.saas-product-card:hover .saas-preview-img {
+  transform: scale(1.03);
 }
 
 .saas-product-card:hover .saas-ui-preview {
