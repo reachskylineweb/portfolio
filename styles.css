@@ -1591,8 +1591,10 @@ h1, h2, h3, h4, h5, h6 {
   backface-visibility: hidden;
 }
 
-.brand-carousel-marquee-track:hover {
-  animation-play-state: paused;
+.brand-carousel-marquee-wrapper:hover .brand-carousel-marquee-track,
+.brand-carousel-marquee-track:hover,
+.brand-carousel-marquee-track .brand-unified-media-card:hover {
+  animation-play-state: paused !important;
 }
 
 @media (max-width: 768px) {

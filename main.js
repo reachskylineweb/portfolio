@@ -743,18 +743,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const track = entry.target.querySelector('.brand-carousel-marquee-track');
         if (!track) return;
         if (entry.isIntersecting) {
-          // In view: start smooth marquee
-          track.style.animationPlayState = 'running';
+          entry.target.dataset.inView = 'true';
+          if (!entry.target.matches(':hover')) {
+            track.style.animationPlayState = 'running';
+          }
         } else {
-          // Scrolled away: immediately freeze / hold animation to release CPU
+          entry.target.dataset.inView = 'false';
           track.style.animationPlayState = 'paused';
         }
       });
     }, {
-      rootMargin: '20px 0px 20px 0px',
-      threshold: 0.1
+      rootMargin: '40px 0px 40px 0px',
+      threshold: 0.05
     });
 
-    brandCards.forEach(card => observer.observe(card));
+    brandCards.forEach(card => {
+      observer.observe(card);
+      const wrapper = card.querySelector('.brand-carousel-marquee-wrapper');
+      const track = card.querySelector('.brand-carousel-marquee-track');
+      if (wrapper && track) {
+        wrapper.addEventListener('pointerenter', () => {
+          track.style.animationPlayState = 'paused';
+        });
+        wrapper.addEventListener('pointerleave', () => {
+          if (card.dataset.inView === 'true') {
+            track.style.animationPlayState = 'running';
+          }
+        });
+      }
+    });
   }
 });
