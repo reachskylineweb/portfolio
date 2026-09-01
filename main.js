@@ -396,21 +396,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Video Showcase Catalog & Multi-Video Modal Handlers
   const videoCatalog = {
     v1: {
-      category: "YouTube Production (2 Videos)",
-      title: "Brand Showcase & Commercial Films",
-      description: "Financial consulting films produced for SPR & Co. explaining forward option swaps and corporate transfer pricing.",
+      category: "GEM Hospital • Medical Awareness Film",
+      title: "Doctor Awareness & Health Insights",
+      description: "Medical awareness video produced for GEM Hospitals featuring Doctor Anand Vijai explaining liver damage truths, health care, and clinical insights.",
       videos: [
         {
-          id: "coyTnw9m3Xk",
-          title: "Video 1: SPR & Co. — Forward, Option & Swaps Film",
-          url: "https://www.youtube.com/watch?v=coyTnw9m3Xk",
-          thumb: "https://img.youtube.com/vi/coyTnw9m3Xk/hqdefault.jpg"
+          id: "nNAC3Hp26iI",
+          title: "Is Alcohol Safe? Complete Truth About Liver Damage | Doctor Anand Vijai Explains — GEM Hospitals",
+          url: "https://www.youtube.com/watch?v=nNAC3Hp26iI",
+          thumb: "https://img.youtube.com/vi/nNAC3Hp26iI/hqdefault.jpg"
         },
         {
-          id: "RsVyecVHpcM",
-          title: "Video 2: SPR & Co. — Transfer Pricing & Financial Advisory",
-          url: "https://www.youtube.com/watch?v=RsVyecVHpcM",
-          thumb: "https://img.youtube.com/vi/RsVyecVHpcM/hqdefault.jpg"
+          id: "coyTnw9m3Xk",
+          title: "Video 2: Corporate Brand & Advisory Production",
+          url: "https://www.youtube.com/watch?v=coyTnw9m3Xk",
+          thumb: "https://img.youtube.com/vi/coyTnw9m3Xk/hqdefault.jpg"
         }
       ]
     },
