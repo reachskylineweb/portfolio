@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=3.2" />
+  <link rel="stylesheet" href="styles.css?v=4.0" />
 </head>
 <body>
 
@@ -1808,43 +1808,93 @@
       <div class="section-header text-center">
         <div class="section-tag">SAAS PRODUCTS</div>
         <h2 class="section-title">Digital Products Built to <span class="text-gradient-gold">Move Businesses Forward</span></h2>
-        <p class="section-subtitle">From customer management and enterprise operations to automation and analytics, we build scalable digital products designed around real-world business needs.</p>
+        <p class="section-subtitle">From customer management and enterprise operations to workforce management, automation, support, and analytics, we build scalable digital products designed around real-world business needs.</p>
       </div>
 
-      <!-- 6-Product SaaS Showcase Grid (Exact Uniform Height & Breadth) -->
+      <!-- 6-Product SaaS Showcase Grid (3 cols desktop, 2 cols tablet, 1 col mobile) -->
       <div class="saas-showcase-grid">
 
         <!-- PRODUCT 01: TATA CRM -->
         <div class="saas-product-card">
-          <div class="saas-card-header-row">
-            <div class="saas-card-icon-badge">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <!-- 1. LARGE REALISTIC PRODUCT UI PREVIEW -->
+          <div class="saas-ui-preview">
+            <div class="saas-app-window">
+              <!-- Window Chrome -->
+              <div class="app-window-header">
+                <div class="app-dots"><span></span><span></span><span></span></div>
+                <div class="app-title-bar">tatacrm.app/pipeline</div>
+                <div class="app-live-status"><span class="status-dot green"></span>Live Engine</div>
+              </div>
+              <!-- App Canvas -->
+              <div class="app-window-body">
+                <div class="app-mini-sidebar">
+                  <div class="app-nav-icon active"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+                </div>
+                <div class="app-main-view">
+                  <div class="app-kpi-strip">
+                    <div class="app-kpi-cell"><span class="kpi-n">1,280</span><span class="kpi-l">Leads</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n">412</span><span class="kpi-l">Accounts</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n text-gold">&#8377;24.5L</span><span class="kpi-l">Pipeline</span></div>
+                  </div>
+                  <div class="app-crm-pipeline">
+                    <div class="crm-stage-col">
+                      <span class="crm-stage-title">In Negotiation</span>
+                      <div class="crm-card-item">
+                        <span class="crm-c-name">Supreme Healthcare</span>
+                        <span class="crm-c-val">&#8377;4.8L &bull; High</span>
+                      </div>
+                    </div>
+                    <div class="crm-stage-col">
+                      <span class="crm-stage-title">Contract Sent</span>
+                      <div class="crm-card-item won">
+                        <span class="crm-c-name">Apex Global Tech</span>
+                        <span class="crm-c-val">&#8377;6.2L &bull; Closing</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="saas-cat-pill">Customer Management</div>
-            <span class="saas-index-num">01</span>
           </div>
 
+          <!-- 2. META & HEADER -->
+          <div class="saas-card-meta-row">
+            <div class="saas-cat-pill">CUSTOMER MANAGEMENT</div>
+            <div class="saas-meta-right">
+              <span class="saas-status-badge status-live">LIVE PRODUCT</span>
+              <span class="saas-index-num">01</span>
+            </div>
+          </div>
+
+          <!-- 3. BODY -->
           <div class="saas-card-body">
             <h3 class="saas-card-title">TATA CRM</h3>
             <p class="saas-card-tagline">“Turn Customer Relationships into Business Growth.”</p>
             <p class="saas-card-desc">TATA CRM is designed to centralize customer information, manage leads, track sales activities, and simplify customer follow-ups through a unified CRM platform.</p>
 
+            <!-- 4. MODULES -->
             <div class="saas-features-box">
-              <span class="saas-features-label">Core Capabilities</span>
+              <span class="saas-features-label">Product Modules</span>
               <div class="saas-feature-tags">
-                <span class="feat-tag">Lead Management</span>
-                <span class="feat-tag">Customer Database</span>
+                <span class="feat-tag">Leads</span>
+                <span class="feat-tag">Customers</span>
                 <span class="feat-tag">Sales Pipeline</span>
-                <span class="feat-tag">Follow-up Management</span>
-                <span class="feat-tag">Task Tracking</span>
-                <span class="feat-tag">Communication History</span>
-                <span class="feat-tag">Sales Reports</span>
-                <span class="feat-tag">Role Management</span>
+                <span class="feat-tag">Follow-ups</span>
+                <span class="feat-tag">Tasks</span>
+                <span class="feat-tag">Communication</span>
+                <span class="feat-tag">Reports</span>
               </div>
             </div>
 
+            <!-- 5. BUILT FOR & CTA -->
+            <div class="saas-built-for">
+              <span class="built-label">Built For:</span> Sales Teams &middot; Customer Support &middot; Business Development
+            </div>
+
             <div class="saas-card-footer">
-              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('TATA CRM Inquiry')">
+              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('TATA CRM Product Inquiry')">
                 <span>Explore Product</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
@@ -1854,35 +1904,77 @@
 
         <!-- PRODUCT 02: ReachSkyline ERP -->
         <div class="saas-product-card">
-          <div class="saas-card-header-row">
-            <div class="saas-card-icon-badge">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <!-- 1. LARGE REALISTIC PRODUCT UI PREVIEW -->
+          <div class="saas-ui-preview">
+            <div class="saas-app-window">
+              <div class="app-window-header">
+                <div class="app-dots"><span></span><span></span><span></span></div>
+                <div class="app-title-bar">erp.reachskyline.app/control</div>
+                <div class="app-live-status"><span class="status-dot green"></span>Enterprise</div>
+              </div>
+              <div class="app-window-body">
+                <div class="app-mini-sidebar">
+                  <div class="app-nav-icon active"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"></circle></svg></div>
+                </div>
+                <div class="app-main-view">
+                  <div class="app-kpi-strip">
+                    <div class="app-kpi-cell"><span class="kpi-n">18</span><span class="kpi-l">Workflows</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n">142</span><span class="kpi-l">Orders/Day</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n text-gold">94.8%</span><span class="kpi-l">Capacity</span></div>
+                  </div>
+                  <div class="app-erp-modules">
+                    <div class="erp-mod-row">
+                      <span class="mod-name"><span class="mod-dot green"></span>Supply Chain Hub</span>
+                      <span class="mod-badge">Active</span>
+                    </div>
+                    <div class="erp-mod-row">
+                      <span class="mod-name"><span class="mod-dot blue"></span>Financial Ledger</span>
+                      <span class="mod-badge">Auto-Synced</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="saas-cat-pill">Enterprise Management</div>
-            <span class="saas-index-num">02</span>
           </div>
 
+          <!-- 2. META & HEADER -->
+          <div class="saas-card-meta-row">
+            <div class="saas-cat-pill">ENTERPRISE MANAGEMENT</div>
+            <div class="saas-meta-right">
+              <span class="saas-status-badge status-live">LIVE PRODUCT</span>
+              <span class="saas-index-num">02</span>
+            </div>
+          </div>
+
+          <!-- 3. BODY -->
           <div class="saas-card-body">
             <h3 class="saas-card-title">ReachSkyline ERP</h3>
             <p class="saas-card-tagline">“One Platform. Connected Business Operations.”</p>
             <p class="saas-card-desc">ReachSkyline ERP brings multiple business processes into a centralized platform, enabling organizations to manage operations, workflows, users, and business data more efficiently.</p>
 
+            <!-- 4. MODULES -->
             <div class="saas-features-box">
-              <span class="saas-features-label">Core Capabilities</span>
+              <span class="saas-features-label">Product Modules</span>
               <div class="saas-feature-tags">
-                <span class="feat-tag">Process Management</span>
-                <span class="feat-tag">Workflow Automation</span>
-                <span class="feat-tag">User &amp; Role Access</span>
+                <span class="feat-tag">Operations</span>
+                <span class="feat-tag">Workflow</span>
+                <span class="feat-tag">User Access</span>
                 <span class="feat-tag">Centralized Data</span>
-                <span class="feat-tag">Reports &amp; Dashboards</span>
-                <span class="feat-tag">Operational Tracking</span>
-                <span class="feat-tag">Document Management</span>
-                <span class="feat-tag">Process Monitoring</span>
+                <span class="feat-tag">Documents</span>
+                <span class="feat-tag">Reports</span>
+                <span class="feat-tag">Administration</span>
               </div>
             </div>
 
+            <!-- 5. BUILT FOR & CTA -->
+            <div class="saas-built-for">
+              <span class="built-label">Built For:</span> SMEs &middot; Operations Teams &middot; Management
+            </div>
+
             <div class="saas-card-footer">
-              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('ReachSkyline ERP Inquiry')">
+              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('ReachSkyline ERP Product Inquiry')">
                 <span>Explore Product</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
@@ -1892,36 +1984,80 @@
 
         <!-- PRODUCT 03: Skyline HR -->
         <div class="saas-product-card">
-          <div class="saas-card-header-row">
-            <div class="saas-card-icon-badge">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+          <!-- 1. LARGE REALISTIC PRODUCT UI PREVIEW -->
+          <div class="saas-ui-preview">
+            <div class="saas-app-window">
+              <div class="app-window-header">
+                <div class="app-dots"><span></span><span></span><span></span></div>
+                <div class="app-title-bar">hr.skyline.app/workforce</div>
+                <div class="app-live-status"><span class="status-dot purple"></span>HRMS</div>
+              </div>
+              <div class="app-window-body">
+                <div class="app-mini-sidebar">
+                  <div class="app-nav-icon active"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path></svg></div>
+                </div>
+                <div class="app-main-view">
+                  <div class="app-kpi-strip">
+                    <div class="app-kpi-cell"><span class="kpi-n">164</span><span class="kpi-l">Employees</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n text-gold">96%</span><span class="kpi-l">Present</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n">3</span><span class="kpi-l">Pending</span></div>
+                  </div>
+                  <div class="app-hr-roster">
+                    <div class="hr-member-row">
+                      <div class="hr-m-avatar">RK</div>
+                      <div class="hr-m-details"><span class="hr-name">Engineering Lead</span><span class="hr-dept">Technology</span></div>
+                      <span class="hr-badge-status in">In Office</span>
+                    </div>
+                    <div class="hr-member-row">
+                      <div class="hr-m-avatar">AP</div>
+                      <div class="hr-m-details"><span class="hr-name">Operations Specialist</span><span class="hr-dept">Logistics</span></div>
+                      <span class="hr-badge-status remote">WFH</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="saas-cat-pill">Workforce Management</div>
-            <span class="saas-index-num">03</span>
           </div>
 
+          <!-- 2. META & HEADER -->
+          <div class="saas-card-meta-row">
+            <div class="saas-cat-pill">WORKFORCE MANAGEMENT</div>
+            <div class="saas-meta-right">
+              <span class="saas-status-badge status-concept">PRODUCT CONCEPT</span>
+              <span class="saas-index-num">03</span>
+            </div>
+          </div>
+
+          <!-- 3. BODY -->
           <div class="saas-card-body">
             <h3 class="saas-card-title">Skyline HR</h3>
             <p class="saas-card-tagline">“Simplify Your People Operations.”</p>
-            <p class="saas-card-desc">Skyline HR is a centralized workforce management platform designed to simplify employee records, attendance, leave, onboarding, and everyday HR operations.</p>
+            <p class="saas-card-desc">Skyline HR is a workforce management platform concept designed to simplify employee records, attendance, leave, onboarding, and everyday HR operations.</p>
 
+            <!-- 4. MODULES -->
             <div class="saas-features-box">
-              <span class="saas-features-label">Core Capabilities</span>
+              <span class="saas-features-label">Product Modules</span>
               <div class="saas-feature-tags">
-                <span class="feat-tag">Employee Records</span>
-                <span class="feat-tag">Attendance Tracking</span>
-                <span class="feat-tag">Leave Management</span>
-                <span class="feat-tag">Employee Onboarding</span>
-                <span class="feat-tag">Department Hub</span>
-                <span class="feat-tag">Document Management</span>
-                <span class="feat-tag">HR Reports</span>
-                <span class="feat-tag">Role-based Access</span>
+                <span class="feat-tag">Employees</span>
+                <span class="feat-tag">Attendance</span>
+                <span class="feat-tag">Leave Mgmt</span>
+                <span class="feat-tag">Onboarding</span>
+                <span class="feat-tag">Departments</span>
+                <span class="feat-tag">Documents</span>
+                <span class="feat-tag">Reports</span>
               </div>
             </div>
 
+            <!-- 5. BUILT FOR & CTA -->
+            <div class="saas-built-for">
+              <span class="built-label">Built For:</span> HR Teams &middot; Employees &middot; Administrators
+            </div>
+
             <div class="saas-card-footer">
-              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('Skyline HR Inquiry')">
-                <span>Explore Product</span>
+              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('Skyline HR Concept Inquiry')">
+                <span>View Concept</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
@@ -1930,36 +2066,78 @@
 
         <!-- PRODUCT 04: Skyline Desk -->
         <div class="saas-product-card">
-          <div class="saas-card-header-row">
-            <div class="saas-card-icon-badge">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+          <!-- 1. LARGE REALISTIC PRODUCT UI PREVIEW -->
+          <div class="saas-ui-preview">
+            <div class="saas-app-window">
+              <div class="app-window-header">
+                <div class="app-dots"><span></span><span></span><span></span></div>
+                <div class="app-title-bar">desk.skyline.app/tickets</div>
+                <div class="app-live-status"><span class="status-dot blue"></span>Support OS</div>
+              </div>
+              <div class="app-window-body">
+                <div class="app-mini-sidebar">
+                  <div class="app-nav-icon active"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path></svg></div>
+                </div>
+                <div class="app-main-view">
+                  <div class="app-kpi-strip">
+                    <div class="app-kpi-cell"><span class="kpi-n">14</span><span class="kpi-l">Open</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n text-gold">4.2m</span><span class="kpi-l">Avg Response</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n">98.6%</span><span class="kpi-l">SLA Met</span></div>
+                  </div>
+                  <div class="app-desk-queue">
+                    <div class="desk-ticket-row">
+                      <div class="ticket-meta"><span class="t-id">#TK-4091</span><span class="t-prio high">High</span></div>
+                      <span class="t-subj">API Authentication Token Issue</span>
+                    </div>
+                    <div class="desk-ticket-row">
+                      <div class="ticket-meta"><span class="t-id">#TK-4092</span><span class="t-prio med">Medium</span></div>
+                      <span class="t-subj">Custom Domain SSL Routing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="saas-cat-pill">Customer Support</div>
-            <span class="saas-index-num">04</span>
           </div>
 
+          <!-- 2. META & HEADER -->
+          <div class="saas-card-meta-row">
+            <div class="saas-cat-pill">CUSTOMER SUPPORT</div>
+            <div class="saas-meta-right">
+              <span class="saas-status-badge status-concept">PRODUCT CONCEPT</span>
+              <span class="saas-index-num">04</span>
+            </div>
+          </div>
+
+          <!-- 3. BODY -->
           <div class="saas-card-body">
             <h3 class="saas-card-title">Skyline Desk</h3>
             <p class="saas-card-tagline">“Every Support Request. One Smart Workspace.”</p>
-            <p class="saas-card-desc">Skyline Desk is a customer support platform that helps businesses manage support requests, assign tickets, track resolutions, and maintain a structured customer service workflow.</p>
+            <p class="saas-card-desc">Skyline Desk is a customer support platform concept designed to help businesses manage support requests, assign tickets, track resolutions, and maintain structured customer service workflows.</p>
 
+            <!-- 4. MODULES -->
             <div class="saas-features-box">
-              <span class="saas-features-label">Core Capabilities</span>
+              <span class="saas-features-label">Product Modules</span>
               <div class="saas-feature-tags">
-                <span class="feat-tag">Ticket Management</span>
-                <span class="feat-tag">Ticket Assignment</span>
-                <span class="feat-tag">Priority Controls</span>
-                <span class="feat-tag">Support Team Hub</span>
-                <span class="feat-tag">Status Tracking</span>
-                <span class="feat-tag">Customer History</span>
-                <span class="feat-tag">Response Tracking</span>
+                <span class="feat-tag">Tickets</span>
+                <span class="feat-tag">Customers</span>
+                <span class="feat-tag">Agents</span>
+                <span class="feat-tag">Priorities</span>
+                <span class="feat-tag">SLA Tracking</span>
+                <span class="feat-tag">Responses</span>
                 <span class="feat-tag">Support Analytics</span>
               </div>
             </div>
 
+            <!-- 5. BUILT FOR & CTA -->
+            <div class="saas-built-for">
+              <span class="built-label">Built For:</span> Support Teams &middot; Service Teams &middot; Customer Success
+            </div>
+
             <div class="saas-card-footer">
-              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('Skyline Desk Inquiry')">
-                <span>Explore Product</span>
+              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('Skyline Desk Concept Inquiry')">
+                <span>View Concept</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
@@ -1968,36 +2146,74 @@
 
         <!-- PRODUCT 05: Skyline Flow -->
         <div class="saas-product-card">
-          <div class="saas-card-header-row">
-            <div class="saas-card-icon-badge">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          <!-- 1. LARGE REALISTIC PRODUCT UI PREVIEW -->
+          <div class="saas-ui-preview">
+            <div class="saas-app-window">
+              <div class="app-window-header">
+                <div class="app-dots"><span></span><span></span><span></span></div>
+                <div class="app-title-bar">flow.skyline.app/builder</div>
+                <div class="app-live-status"><span class="status-dot amber"></span>Flow Builder</div>
+              </div>
+              <div class="app-window-body">
+                <div class="app-flow-canvas">
+                  <div class="flow-canvas-grid">
+                    <div class="flow-node trigger">
+                      <span class="node-icon">&#9889;</span>
+                      <div class="node-info"><span class="node-type">TRIGGER</span><span class="node-title">New Request</span></div>
+                    </div>
+                    <div class="flow-connector">&darr;</div>
+                    <div class="flow-node action">
+                      <span class="node-icon">&#9881;&#65039;</span>
+                      <div class="node-info"><span class="node-type">APPROVAL</span><span class="node-title">Manager Sign-off</span></div>
+                    </div>
+                    <div class="flow-connector">&darr;</div>
+                    <div class="flow-node complete">
+                      <span class="node-icon">&#9989;</span>
+                      <div class="node-info"><span class="node-type">ACTION</span><span class="node-title">Auto-Assign Task</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="saas-cat-pill">Process Automation</div>
-            <span class="saas-index-num">05</span>
           </div>
 
+          <!-- 2. META & HEADER -->
+          <div class="saas-card-meta-row">
+            <div class="saas-cat-pill">WORKFLOW AUTOMATION</div>
+            <div class="saas-meta-right">
+              <span class="saas-status-badge status-concept">PRODUCT CONCEPT</span>
+              <span class="saas-index-num">05</span>
+            </div>
+          </div>
+
+          <!-- 3. BODY -->
           <div class="saas-card-body">
             <h3 class="saas-card-title">Skyline Flow</h3>
             <p class="saas-card-tagline">“Replace Manual Processes with Intelligent Workflows.”</p>
-            <p class="saas-card-desc">Skyline Flow is a workflow automation platform designed to digitize repetitive business processes, approvals, task assignments, and internal operations.</p>
+            <p class="saas-card-desc">Skyline Flow is a workflow automation platform concept designed to digitize repetitive business processes, approvals, task assignments, and internal operations.</p>
 
+            <!-- 4. MODULES -->
             <div class="saas-features-box">
-              <span class="saas-features-label">Core Capabilities</span>
+              <span class="saas-features-label">Product Modules</span>
               <div class="saas-feature-tags">
-                <span class="feat-tag">Custom Workflows</span>
-                <span class="feat-tag">Approval Engine</span>
-                <span class="feat-tag">Automated Tasks</span>
-                <span class="feat-tag">Process Tracking</span>
-                <span class="feat-tag">Real-Time Alerts</span>
-                <span class="feat-tag">Role-based Flows</span>
-                <span class="feat-tag">Status Monitoring</span>
+                <span class="feat-tag">Workflows</span>
+                <span class="feat-tag">Approvals</span>
+                <span class="feat-tag">Tasks</span>
+                <span class="feat-tag">Rules</span>
+                <span class="feat-tag">Notifications</span>
+                <span class="feat-tag">Status Monitor</span>
                 <span class="feat-tag">Workflow Analytics</span>
               </div>
             </div>
 
+            <!-- 5. BUILT FOR & CTA -->
+            <div class="saas-built-for">
+              <span class="built-label">Built For:</span> Operations &middot; Administration &middot; Management Teams
+            </div>
+
             <div class="saas-card-footer">
-              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('Skyline Flow Inquiry')">
-                <span>Explore Product</span>
+              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('Skyline Flow Concept Inquiry')">
+                <span>View Concept</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
@@ -2006,36 +2222,82 @@
 
         <!-- PRODUCT 06: Skyline Insights -->
         <div class="saas-product-card">
-          <div class="saas-card-header-row">
-            <div class="saas-card-icon-badge">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+          <!-- 1. LARGE REALISTIC PRODUCT UI PREVIEW -->
+          <div class="saas-ui-preview">
+            <div class="saas-app-window">
+              <div class="app-window-header">
+                <div class="app-dots"><span></span><span></span><span></span></div>
+                <div class="app-title-bar">insights.skyline.app/bi</div>
+                <div class="app-live-status"><span class="status-dot green"></span>Analytics</div>
+              </div>
+              <div class="app-window-body">
+                <div class="app-mini-sidebar">
+                  <div class="app-nav-icon active"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg></div>
+                  <div class="app-nav-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div>
+                </div>
+                <div class="app-main-view">
+                  <div class="app-kpi-strip">
+                    <div class="app-kpi-cell"><span class="kpi-n text-gold">+24.8%</span><span class="kpi-l">Growth</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n">71.4%</span><span class="kpi-l">Margin</span></div>
+                    <div class="app-kpi-cell"><span class="kpi-n">2.1 Mo</span><span class="kpi-l">CAC Payback</span></div>
+                  </div>
+                  <div class="app-insights-chart">
+                    <div class="bi-chart-bars">
+                      <div class="bi-b" style="height: 40%;"></div>
+                      <div class="bi-b" style="height: 65%;"></div>
+                      <div class="bi-b" style="height: 50%;"></div>
+                      <div class="bi-b active" style="height: 92%;"></div>
+                      <div class="bi-b" style="height: 75%;"></div>
+                      <div class="bi-b" style="height: 85%;"></div>
+                    </div>
+                    <div class="bi-chart-meta">
+                      <span>Historical Trajectory</span>
+                      <span class="bi-trend-text">&uarr; Outperforming</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="saas-cat-pill">Analytics &amp; BI</div>
-            <span class="saas-index-num">06</span>
           </div>
 
+          <!-- 2. META & HEADER -->
+          <div class="saas-card-meta-row">
+            <div class="saas-cat-pill">BUSINESS INTELLIGENCE</div>
+            <div class="saas-meta-right">
+              <span class="saas-status-badge status-concept">PRODUCT CONCEPT</span>
+              <span class="saas-index-num">06</span>
+            </div>
+          </div>
+
+          <!-- 3. BODY -->
           <div class="saas-card-body">
             <h3 class="saas-card-title">Skyline Insights</h3>
             <p class="saas-card-tagline">“Turn Business Data into Clear Decisions.”</p>
-            <p class="saas-card-desc">Skyline Insights is a business analytics platform that brings operational data into interactive dashboards, helping teams monitor performance and identify important business trends.</p>
+            <p class="saas-card-desc">Skyline Insights is a business analytics platform concept designed to bring operational data into interactive dashboards and help teams monitor performance and identify important business trends.</p>
 
+            <!-- 4. MODULES -->
             <div class="saas-features-box">
-              <span class="saas-features-label">Core Capabilities</span>
+              <span class="saas-features-label">Product Modules</span>
               <div class="saas-feature-tags">
-                <span class="feat-tag">Interactive Dashboards</span>
-                <span class="feat-tag">KPI Tracking</span>
-                <span class="feat-tag">Custom Reports</span>
-                <span class="feat-tag">Data Visualization</span>
-                <span class="feat-tag">Performance Monitor</span>
-                <span class="feat-tag">Department Analytics</span>
+                <span class="feat-tag">Dashboards</span>
+                <span class="feat-tag">KPIs</span>
+                <span class="feat-tag">Reports</span>
+                <span class="feat-tag">Analytics</span>
+                <span class="feat-tag">Data Visuals</span>
+                <span class="feat-tag">Exportable Data</span>
                 <span class="feat-tag">Trend Analysis</span>
-                <span class="feat-tag">Exportable Reports</span>
               </div>
             </div>
 
+            <!-- 5. BUILT FOR & CTA -->
+            <div class="saas-built-for">
+              <span class="built-label">Built For:</span> Business Owners &middot; Managers &middot; Decision Makers
+            </div>
+
             <div class="saas-card-footer">
-              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('Skyline Insights Inquiry')">
-                <span>Explore Product</span>
+              <button class="btn btn-outline-dark btn-block" onclick="openContactModal('Skyline Insights Concept Inquiry')">
+                <span>View Concept</span>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
               </button>
             </div>
@@ -2044,11 +2306,12 @@
 
       </div>
 
-      <!-- Bottom Action CTA -->
+      <!-- Bottom High-Impact Enterprise CTA -->
       <div class="saas-bottom-cta text-center">
-        <button class="btn btn-primary btn-lg" onclick="openContactModal('Explore All SaaS Products')">
-          <span>Explore All Products &amp; Request a Demo</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        <span class="saas-bottom-pretitle">Have a Business Problem to Solve?</span>
+        <h3 class="saas-bottom-headline">“Let’s turn your workflow, process, or business idea into a scalable digital product.”</h3>
+        <button class="btn btn-primary btn-lg" onclick="openContactModal('Build Your Product Inquiry')">
+          <span>Build Your Product &rarr;</span>
         </button>
       </div>
 
