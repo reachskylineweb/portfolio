@@ -508,16 +508,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const videoModal = document.getElementById('videoModal');
   const videoPlayerContainer = document.getElementById('videoPlayerContainer');
 
+  window.videoCatalog = videoCatalog;
+
   window.openVideoShowcase = function(showcaseKey) {
     const data = videoCatalog[showcaseKey];
     if (!data) return;
 
-    renderVideoModal(data, data.videos[0].id);
+    window.currentShowcaseKey = showcaseKey;
+    renderVideoModal(showcaseKey, data.videos[0].id);
     videoModal.classList.add('active');
     document.body.style.overflow = 'hidden';
   };
 
-  window.renderVideoModal = function(data, selectedVideoId) {
+  window.switchShowcaseVideo = function(showcaseKey, selectedVideoId) {
+    renderVideoModal(showcaseKey, selectedVideoId);
+  };
+
+  window.renderVideoModal = function(showcaseKey, selectedVideoId) {
+    const data = typeof showcaseKey === 'string' ? videoCatalog[showcaseKey] : showcaseKey;
+    const currentKey = typeof showcaseKey === 'string' ? showcaseKey : window.currentShowcaseKey || 'v1';
+    if (!data) return;
+
     const activeVid = data.videos.find(v => v.id === selectedVideoId) || data.videos[0];
     
     videoPlayerContainer.innerHTML = `
@@ -527,7 +538,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">${data.description}</p>
       </div>
 
-      <!-- Active Video Thumbnail Player Card -->
+      <!-- Active Video Thumbnail Player Card (Big Screen) -->
       <div style="margin-bottom: 1.5rem;">
         <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 12px; overflow: hidden; background: #000; border: 1px solid var(--border-subtle); cursor: pointer;" onclick="window.open('${activeVid.url}', '_blank')">
           <img src="${activeVid.thumb}" alt="${activeVid.title}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85);" />
@@ -542,7 +553,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div style="position: absolute; bottom: 1.25rem; left: 1.25rem; right: 1.25rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
             <div>
               <div style="font-size: 1.15rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">${activeVid.title}</div>
-              <div style="font-size: 0.8rem; color: #000000; font-family: var(--font-mono);">Official Client Video • Click to Watch on YouTube</div>
+              <div style="font-size: 0.8rem; color: #f1f5f9; font-family: var(--font-mono);">Official Client Video • Click to Watch on YouTube</div>
             </div>
             <a href="${activeVid.url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">
               <span>Watch on YouTube</span>
@@ -561,7 +572,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
           ${data.videos.map((vid, idx) => `
             <div style="background: ${vid.id === activeVid.id ? 'rgba(0, 0, 0, 0.04)' : 'var(--bg-surface)'}; border: 1px solid ${vid.id === activeVid.id ? 'var(--gold-primary)' : 'var(--border-subtle)'}; border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; transition: all 0.2s ease;">
-              <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <div style="display: flex; gap: 0.75rem; align-items: center; cursor: pointer;" onclick="switchShowcaseVideo('${currentKey}', '${vid.id}')">
                 <div style="position: relative; width: 90px; height: 55px; border-radius: 6px; overflow: hidden; flex-shrink: 0; background: #000;">
                   <img src="${vid.thumb}" alt="${vid.title}" style="width: 100%; height: 100%; object-fit: cover;" />
                   <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.35);">
@@ -574,7 +585,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
               </div>
               <div style="display: flex; gap: 0.5rem; margin-top: auto;">
-                <button class="btn btn-sm ${vid.id === activeVid.id ? 'btn-primary' : 'btn-secondary'}" style="flex: 1; font-size: 0.8rem;" onclick="renderVideoModal(videoCatalog['${Object.keys(videoCatalog).find(k => videoCatalog[k] === data)}'], '${vid.id}')">
+                <button class="btn btn-sm ${vid.id === activeVid.id ? 'btn-primary' : 'btn-secondary'}" style="flex: 1; font-size: 0.8rem;" onclick="switchShowcaseVideo('${currentKey}', '${vid.id}')">
                   ${vid.id === activeVid.id ? '▶ Selected' : 'Select Video'}
                 </button>
                 <a href="${vid.url}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-gold" style="font-size: 0.8rem; padding: 0.35rem 0.65rem;">
