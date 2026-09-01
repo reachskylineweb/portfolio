@@ -1580,6 +1580,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .brand-carousel-marquee-track {
   display: flex;
+  align-items: flex-start;
   gap: 1.25rem;
   width: max-content;
   animation: autoScrollMarquee 65s linear infinite;
@@ -3657,6 +3658,12 @@ h1, h2, h3, h4, h5, h6 {
    Clips out Instagram's injected iframe header (avatar, 1 follower, View Profile)
    for Hercyclopedia exclusively while preserving all other brand showcases.
    -------------------------------------------------------------------------- */
+.brand-showcase-card[data-client="hercyclopedia"] .brand-unified-media-card {
+  height: auto !important;
+  min-height: auto !important;
+  max-height: none !important;
+}
+
 .brand-showcase-card[data-client="hercyclopedia"] .brand-reel-embed-container {
   overflow: hidden !important;
   position: relative;
