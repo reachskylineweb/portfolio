@@ -747,22 +747,3 @@ document.addEventListener('DOMContentLoaded', () => {
     brandCards.forEach(card => observer.observe(card));
   }
 });
-
-/**
- * Switch Proprietary SaaS Product Tabs (Reach Skyline Labs)
- */
-function switchSaasProduct(productId, btn) {
-  document.querySelectorAll('.saas-tab-btn').forEach(b => b.classList.remove('active'));
-  if (btn) btn.classList.add('active');
-
-  document.querySelectorAll('.saas-panel').forEach(panel => {
-    panel.classList.remove('active');
-  });
-
-  const targetPanel = document.getElementById(`saas-${productId}`);
-  if (targetPanel) {
-    targetPanel.classList.add('active');
-  }
-}
-
-
