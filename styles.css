@@ -1722,6 +1722,29 @@ h1, h2, h3, h4, h5, h6 {
 .brand-carousel-marquee-track .brand-unified-media-card {
   flex: 0 0 260px;
   width: 260px;
+  min-width: 260px;
+  max-width: 260px;
+}
+
+@media (min-width: 1440px) {
+  .brand-carousel-marquee-track .brand-unified-media-card {
+    flex: 0 0 270px;
+    width: 270px;
+    min-width: 270px;
+    max-width: 270px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .brand-carousel-marquee-track .brand-unified-media-card {
+    flex: 0 0 280px;
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+  }
+  .brand-short-thumb-container {
+    height: 350px;
+  }
 }
 
 .brand-short-thumb-container {
