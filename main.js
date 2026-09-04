@@ -687,8 +687,24 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.innerHTML = `<span>Sending Inquiry...</span><svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-linecap="round"></circle></svg>`;
       }
 
+      const rawSubject = `Project Inquiry: ${service} - ${name}`;
+      const rawBody = `Hi Reach Skyline Team,\n\nName: ${name}\nEmail: ${email}\nService Interested: ${service}\n\nProject Details:\n${message}\n\nSent from Reach Skyline Portfolio`;
+
+      const encSubject = encodeURIComponent(rawSubject);
+      const encBody = encodeURIComponent(rawBody);
+
+      // Set direct email links
+      const gmailBtn = document.getElementById('gmailDirectLink');
+      if (gmailBtn) {
+        gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=Solutions@reachskyline.com&su=${encSubject}&body=${encBody}`;
+      }
+      const mailAppBtn = document.getElementById('mailAppDirectLink');
+      if (mailAppBtn) {
+        mailAppBtn.href = `mailto:Solutions@reachskyline.com?subject=${encSubject}&body=${encBody}`;
+      }
+
       try {
-        const response = await fetch("https://formsubmit.co/ajax/Solutions@reachskyline.com", {
+        await fetch("https://formsubmit.co/ajax/Solutions@reachskyline.com", {
           method: "POST",
           headers: { 
             'Content-Type': 'application/json',
@@ -704,19 +720,10 @@ document.addEventListener('DOMContentLoaded', () => {
           })
         });
 
-        if (response.ok) {
-          contactForm.reset();
-          contactForm.style.display = 'none';
-          if (formSuccess) formSuccess.style.display = 'block';
-        } else {
-          throw new Error("Direct submission failed");
-        }
+        contactForm.reset();
+        contactForm.style.display = 'none';
+        if (formSuccess) formSuccess.style.display = 'block';
       } catch (err) {
-        // Fallback: trigger mailto link to Solutions@reachskyline.com
-        const subject = encodeURIComponent(`Project Inquiry: ${service} - ${name}`);
-        const body = encodeURIComponent(`Hi Reach Skyline Team,\n\nName: ${name}\nEmail: ${email}\nService: ${service}\n\nProject Details:\n${message}\n\nSent from Reach Skyline Portfolio Web App`);
-        window.location.href = `mailto:Solutions@reachskyline.com?subject=${subject}&body=${body}`;
-
         contactForm.reset();
         contactForm.style.display = 'none';
         if (formSuccess) formSuccess.style.display = 'block';
