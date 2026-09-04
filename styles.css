@@ -1667,7 +1667,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-animation-play-state: running !important;
   padding: 0.5rem 0;
   will-change: transform;
-  transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -1709,7 +1708,6 @@ h1, h2, h3, h4, h5, h6 {
     gap: 12px !important;
     padding: 0.25rem 0 !important;
     will-change: transform !important;
-    transform: translate3d(0, 0, 0) !important;
     -webkit-backface-visibility: hidden !important;
     backface-visibility: hidden !important;
   }
