@@ -2100,15 +2100,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .ad-posters-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 340px));
+  gap: 1.75rem;
+  width: 100%;
+  justify-content: center;
   transition: opacity 0.3s ease;
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1600px) {
   .ad-posters-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 360px));
+    gap: 2rem;
   }
 }
 
@@ -2116,6 +2118,7 @@ h1, h2, h3, h4, h5, h6 {
   .ad-posters-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    justify-content: stretch;
   }
 }
 
@@ -2123,6 +2126,7 @@ h1, h2, h3, h4, h5, h6 {
   .ad-posters-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+    justify-content: stretch;
   }
 }
 
@@ -2136,6 +2140,8 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
 }
 
 .ad-poster-card:hover {
@@ -2147,9 +2153,9 @@ h1, h2, h3, h4, h5, h6 {
 .ad-poster-img-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
-  background: #f4f5f7;
+  background: #f1f5f9;
   display: flex;
   align-items: center;
   justify-content: center;
