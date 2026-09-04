@@ -1621,12 +1621,25 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--gold-dark);
 }
 
-@keyframes autoScrollMarquee {
+@-webkit-keyframes autoScrollMarquee {
   0% {
-    transform: translateX(0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translateX(-50%);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes autoScrollMarquee {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -1641,22 +1654,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .brand-carousel-marquee-track {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.25rem;
-  width: max-content;
-  animation: autoScrollMarquee 65s linear infinite;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 1.25rem !important;
+  width: max-content !important;
+  animation: autoScrollMarquee 65s linear infinite !important;
+  -webkit-animation: autoScrollMarquee 65s linear infinite !important;
   padding: 0.5rem 0;
   will-change: transform;
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
-.brand-carousel-marquee-wrapper:hover .brand-carousel-marquee-track,
-.brand-carousel-marquee-track:hover,
-.brand-carousel-marquee-track .brand-unified-media-card:hover {
-  animation-play-state: paused !important;
+@media (hover: hover) and (pointer: fine) {
+  .brand-carousel-marquee-wrapper:hover .brand-carousel-marquee-track,
+  .brand-carousel-marquee-track:hover,
+  .brand-carousel-marquee-track .brand-unified-media-card:hover {
+    animation-play-state: paused !important;
+    -webkit-animation-play-state: paused !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1683,23 +1700,16 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .brand-carousel-marquee-track {
-    animation: autoScrollMarquee 38s linear infinite !important;
+    animation: autoScrollMarquee 35s linear infinite !important;
+    -webkit-animation: autoScrollMarquee 35s linear infinite !important;
     width: max-content !important;
     display: flex !important;
     gap: 14px !important;
     padding: 0.25rem 0 !important;
     will-change: transform !important;
-    transform: translateZ(0) !important;
+    transform: translate3d(0, 0, 0) !important;
     -webkit-backface-visibility: hidden !important;
     backface-visibility: hidden !important;
-  }
-
-  .brand-carousel-marquee-wrapper:hover .brand-carousel-marquee-track,
-  .brand-carousel-marquee-track:hover,
-  .brand-carousel-marquee-track:active,
-  .brand-carousel-marquee-track .brand-unified-media-card:hover,
-  .brand-carousel-marquee-track .brand-unified-media-card:active {
-    animation-play-state: paused !important;
   }
 
   .brand-carousel-marquee-track .brand-unified-media-card {
@@ -1714,7 +1724,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
   }
 
-  .brand-carousel-marquee-track .brand-unified-media-card:hover,
   .brand-carousel-marquee-track .brand-unified-media-card:active {
     transform: scale(1.02) translateY(-3px);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
