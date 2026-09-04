@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=45.0" />
+  <link rel="stylesheet" href="styles.css?v=47.0" />
 </head>
 <body>
 
@@ -2674,9 +2674,10 @@
         <button class="ad-filter-btn" data-target="supreme" onclick="filterAdClient('supreme', this)">Supreme Hospitals <span class="ad-count-badge">1</span></button>
       </div>
 
-      <!-- 43 Ad Posters Grid -->
-      <div class="ad-posters-grid" id="adPostersGrid">
-        <div class="ad-poster-card" data-ad-client="tata" onclick="openLightbox('./assets/ad_creative_01.webp', 'Tata Motors / Tata Creative - Automotive & Performance Ads')">
+      <!-- 43 Ad Posters Grid (Auto-scroll marquee on mobile for 'All', static grid on single client) -->
+      <div class="ad-posters-wrapper">
+        <div class="ad-posters-grid is-all-active" id="adPostersGrid" data-active-client="all">
+          <div class="ad-poster-card" data-ad-client="tata" onclick="openLightbox('./assets/ad_creative_01.webp', 'Tata Motors / Tata Creative - Automotive & Performance Ads')">
           <div class="ad-poster-img-wrap">
             <img src="./assets/ad_creative_01.webp" alt="Tata Motors / Tata Creative Ad Creative 1" loading="lazy" decoding="async" />
             <div class="ad-poster-overlay">
@@ -3323,7 +3324,8 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 
 
@@ -4315,6 +4317,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="main.js?v=45.0"></script>
+  <script src="main.js?v=47.0"></script>
 </body>
 </html>

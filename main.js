@@ -742,6 +742,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Initialize Ad Posters Mobile Marquee Duplicates
+  const adGrid = document.getElementById('adPostersGrid');
+  if (adGrid && !adGrid.getAttribute('data-cloned')) {
+    adGrid.classList.add('is-all-active');
+    adGrid.setAttribute('data-active-client', 'all');
+    const originalCards = Array.from(adGrid.querySelectorAll('.ad-poster-card:not([data-ad-clone="true"])'));
+    originalCards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('data-ad-clone', 'true');
+      clone.setAttribute('aria-hidden', 'true');
+      adGrid.appendChild(clone);
+    });
+    adGrid.setAttribute('data-cloned', 'true');
+  }
 });
 
 /**
@@ -768,6 +783,8 @@ function filterSocialClient(clientId, btn) {
 
 /**
  * Filter Paid Media & Ad Creatives by Client
+ * Auto-scroll marquee active ONLY for 'all' on mobile.
+ * When individual client selected: static grid without scrolling.
  */
 function filterAdClient(clientKey, btn) {
   document.querySelectorAll('.ad-filter-btn').forEach(b => b.classList.remove('active'));
@@ -781,15 +798,28 @@ function filterAdClient(clientKey, btn) {
   const grid = document.getElementById('adPostersGrid');
   if (grid) {
     grid.style.opacity = '0.3';
+    grid.setAttribute('data-active-client', clientKey);
+    if (clientKey === 'all') {
+      grid.classList.add('is-all-active');
+    } else {
+      grid.classList.remove('is-all-active');
+    }
   }
 
   setTimeout(() => {
     const cards = document.querySelectorAll('.ad-poster-card');
     cards.forEach(card => {
-      if (clientKey === 'all' || card.getAttribute('data-ad-client') === clientKey) {
+      const isClone = card.getAttribute('data-ad-clone') === 'true';
+      if (clientKey === 'all') {
         card.style.display = 'flex';
       } else {
-        card.style.display = 'none';
+        if (isClone) {
+          card.style.display = 'none';
+        } else if (card.getAttribute('data-ad-client') === clientKey) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
       }
     });
     if (grid) {
