@@ -688,50 +688,37 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const rawSubject = `Project Inquiry: ${service} - ${name}`;
-      const rawBody = `Hi Reach Skyline Team,\n\nName: ${name}\nEmail: ${email}\nService Interested: ${service}\n\nProject Details:\n${message}\n\nSent from Reach Skyline Portfolio`;
+      const rawBody = `Hi Reach Skyline Team,\n\nI would like to discuss a project with Reach Skyline.\n\nName / Organization: ${name}\nEmail: ${email}\nService Interested: ${service}\n\nProject Details & Goals:\n${message}\n\n--\nSent from Reach Skyline Portfolio`;
 
       const encSubject = encodeURIComponent(rawSubject);
       const encBody = encodeURIComponent(rawBody);
 
+      const mailtoUrl = `mailto:Solutions@reachskyline.com?subject=${encSubject}&body=${encBody}`;
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=Solutions@reachskyline.com&su=${encSubject}&body=${encBody}`;
+
       // Set direct email links
       const gmailBtn = document.getElementById('gmailDirectLink');
       if (gmailBtn) {
-        gmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=Solutions@reachskyline.com&su=${encSubject}&body=${encBody}`;
+        gmailBtn.href = gmailUrl;
       }
       const mailAppBtn = document.getElementById('mailAppDirectLink');
       if (mailAppBtn) {
-        mailAppBtn.href = `mailto:Solutions@reachskyline.com?subject=${encSubject}&body=${encBody}`;
+        mailAppBtn.href = mailtoUrl;
       }
 
-      try {
-        await fetch("https://formsubmit.co/ajax/Solutions@reachskyline.com", {
-          method: "POST",
-          headers: { 
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            service: service,
-            message: message,
-            _subject: `New Project Inquiry: ${service} - ${name} (${email})`,
-            _template: 'table'
-          })
-        });
+      // Automatically launch mail client
+      setTimeout(() => {
+        window.location.href = mailtoUrl;
+      }, 100);
 
-        contactForm.reset();
-        contactForm.style.display = 'none';
-        if (formSuccess) formSuccess.style.display = 'block';
-      } catch (err) {
-        contactForm.reset();
-        contactForm.style.display = 'none';
-        if (formSuccess) formSuccess.style.display = 'block';
-      } finally {
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = originalBtnHtml;
-        }
+      // Transition to success & direct dispatch screen
+      contactForm.reset();
+      contactForm.style.display = 'none';
+      if (formSuccess) formSuccess.style.display = 'block';
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
       }
     });
   }
