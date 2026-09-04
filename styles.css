@@ -146,8 +146,60 @@ h1, h2, h3, h4, h5, h6 {
   max-width: var(--container-max);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1560px;
+  }
+  .container {
+    max-width: 1560px;
+    width: 94%;
+  }
+  .hero-content {
+    max-width: 1100px;
+  }
+  .hero-subheadline {
+    max-width: 780px;
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --container-max: 1800px;
+  }
+  .container {
+    max-width: 1800px;
+    width: 95%;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .hero-content {
+    max-width: 1380px;
+  }
+  .hero-subheadline {
+    max-width: 920px;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --container-max: 2200px;
+  }
+  .container {
+    max-width: 2200px;
+    width: 95%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .hero-content {
+    max-width: 1600px;
+  }
+  .hero-subheadline {
+    max-width: 1100px;
+  }
 }
 
 .section {
