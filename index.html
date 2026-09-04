@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=36.0" />
+  <link rel="stylesheet" href="styles.css?v=37.0" />
 </head>
 <body>
 
@@ -4323,46 +4323,61 @@
           Connect directly with the Reach Skyline team at <strong class="text-gold">Solutions@reachskyline.com</strong>.
         </p>
 
-        <form id="projectInquiryForm">
+        <form id="projectInquiryForm" action="https://formsubmit.co/Solutions@reachskyline.com" method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="New Project Inquiry - Reach Skyline Portfolio" />
+          <input type="text" name="_honey" style="display:none" />
+
           <div class="form-group">
             <label class="form-label" for="contactName">Your Name / Organization</label>
-            <input type="text" id="contactName" class="form-control" placeholder="e.g. Sarah Jenkins" required />
+            <input type="text" id="contactName" name="name" class="form-control" placeholder="e.g. Sarah Jenkins" required />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="contactEmail">Email Address</label>
-            <input type="email" id="contactEmail" class="form-control" placeholder="name@company.com" required />
+            <input type="email" id="contactEmail" name="email" class="form-control" placeholder="name@company.com" required />
           </div>
 
           <div class="form-group">
             <label class="form-label" for="contactService">Service Required</label>
-            <select id="contactService" class="form-control" style="background: var(--bg-surface); color: var(--text-primary);">
+            <select id="contactService" name="service" class="form-control" style="background: var(--bg-surface); color: var(--text-primary);">
               <option value="Website Development">Website Development</option>
               <option value="SEO">SEO (Search Engine Optimization)</option>
               <option value="Social Media Marketing">Social Media Marketing</option>
               <option value="Video Marketing">Video Marketing</option>
               <option value="Social Media Advertising">Social Media Advertising</option>
               <option value="Reels & Shorts">Reels & Shorts</option>
-              <option value="Traditional Advertising">Traditional Advertising</option>
+              <option value="SaaS & Digital Products">SaaS & Digital Products</option>
               <option value="Full Digital Transformation">Full Digital Transformation</option>
             </select>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="contactMessage">Project Details & Goals</label>
-            <textarea id="contactMessage" class="form-control" rows="4" placeholder="Tell us about your brand, timeline, and requirements..." required></textarea>
+            <textarea id="contactMessage" name="message" class="form-control" rows="4" placeholder="Tell us about your brand, timeline, and requirements..." required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%;">
+          <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width: 100%;">
             <span>Send Project Inquiry</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
           </button>
         </form>
+        <div id="contactFormSuccess" style="display: none; text-align: center; padding: 2rem 1rem;">
+          <div style="width: 56px; height: 56px; border-radius: 50%; background: rgba(34, 197, 94, 0.15); color: #22c55e; display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1rem;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Inquiry Sent Successfully!</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; max-width: 420px; margin: 0 auto 1.5rem;">
+            Thank you for reaching out. Your project details have been delivered directly to <strong class="text-gold">Solutions@reachskyline.com</strong>. Our team will review your requirements and get back to you shortly.
+          </p>
+          <button type="button" class="btn btn-primary btn-sm" onclick="closeAllModals()">Close Window</button>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Scripts -->
-  <script src="main.js?v=36.0"></script>
+  <script src="main.js?v=37.0"></script>
 </body>
 </html>

@@ -638,6 +638,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectElem = document.getElementById('contactService');
       if (selectElem) selectElem.value = servicePreselect;
     }
+    const formElem = document.getElementById('projectInquiryForm');
+    const successElem = document.getElementById('contactFormSuccess');
+    if (formElem) formElem.style.display = 'block';
+    if (successElem) successElem.style.display = 'none';
+
     contactModal.classList.add('active');
     document.body.style.overflow = 'hidden';
   };
@@ -664,24 +669,63 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Contact Form Submission Handler
+  // Contact Form Submission Handler (Sends to Solutions@reachskyline.com)
   const contactForm = document.getElementById('projectInquiryForm');
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const name = document.getElementById('contactName').value;
-      const email = document.getElementById('contactEmail').value;
+      const submitBtn = document.getElementById('contactSubmitBtn');
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
       const service = document.getElementById('contactService').value;
-      const message = document.getElementById('contactMessage').value;
+      const message = document.getElementById('contactMessage').value.trim();
+      const formSuccess = document.getElementById('contactFormSuccess');
 
-      // Construct mailto link
-      const subject = encodeURIComponent(`Project Inquiry: ${service} - ${name}`);
-      const body = encodeURIComponent(`Hi Reach Skyline Team,\n\nName: ${name}\nEmail: ${email}\nService Interested: ${service}\n\nProject Details:\n${message}\n\nSent from Reach Skyline Portfolio Web App`);
-      
-      window.location.href = `mailto:Solutions@reachskyline.com?subject=${subject}&body=${body}`;
+      const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `<span>Sending Inquiry...</span><svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-linecap="round"></circle></svg>`;
+      }
 
-      alert("Thank you for reaching out! Opening your email client to connect directly with Solutions@reachskyline.com.");
-      closeAllModals();
+      try {
+        const response = await fetch("https://formsubmit.co/ajax/Solutions@reachskyline.com", {
+          method: "POST",
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            service: service,
+            message: message,
+            _subject: `New Project Inquiry: ${service} - ${name} (${email})`,
+            _template: 'table'
+          })
+        });
+
+        if (response.ok) {
+          contactForm.reset();
+          contactForm.style.display = 'none';
+          if (formSuccess) formSuccess.style.display = 'block';
+        } else {
+          throw new Error("Direct submission failed");
+        }
+      } catch (err) {
+        // Fallback: trigger mailto link to Solutions@reachskyline.com
+        const subject = encodeURIComponent(`Project Inquiry: ${service} - ${name}`);
+        const body = encodeURIComponent(`Hi Reach Skyline Team,\n\nName: ${name}\nEmail: ${email}\nService: ${service}\n\nProject Details:\n${message}\n\nSent from Reach Skyline Portfolio Web App`);
+        window.location.href = `mailto:Solutions@reachskyline.com?subject=${subject}&body=${body}`;
+
+        contactForm.reset();
+        contactForm.style.display = 'none';
+        if (formSuccess) formSuccess.style.display = 'block';
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+        }
+      }
     });
   }
 });
