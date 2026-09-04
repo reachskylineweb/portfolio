@@ -1646,7 +1646,8 @@ h1, h2, h3, h4, h5, h6 {
 .brand-carousel-marquee-wrapper {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow: hidden !important;
+  overflow-x: hidden !important;
   padding: 0.5rem 0;
   margin-top: 1rem;
   mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
@@ -1655,11 +1656,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .brand-carousel-marquee-track {
   display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   align-items: flex-start !important;
   gap: 1.25rem !important;
   width: max-content !important;
-  animation: autoScrollMarquee 65s linear infinite !important;
-  -webkit-animation: autoScrollMarquee 65s linear infinite !important;
+  animation: autoScrollMarquee 50s linear infinite !important;
+  -webkit-animation: autoScrollMarquee 50s linear infinite !important;
+  animation-play-state: running !important;
+  -webkit-animation-play-state: running !important;
   padding: 0.5rem 0;
   will-change: transform;
   transform: translate3d(0, 0, 0);
@@ -1667,16 +1672,7 @@ h1, h2, h3, h4, h5, h6 {
   backface-visibility: hidden;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .brand-carousel-marquee-wrapper:hover .brand-carousel-marquee-track,
-  .brand-carousel-marquee-track:hover,
-  .brand-carousel-marquee-track .brand-unified-media-card:hover {
-    animation-play-state: paused !important;
-    -webkit-animation-play-state: paused !important;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .navbar,
   .navbar.scrolled {
     backdrop-filter: none !important;
@@ -1684,27 +1680,33 @@ h1, h2, h3, h4, h5, h6 {
     background: rgba(255, 255, 255, 0.98) !important;
   }
 
-  /* Continuous auto-scroll marquee for all clients on mobile view */
+  /* Continuous auto-scroll marquee for all clients on mobile & tablet view */
   .brand-carousel-marquee-wrapper {
     overflow: hidden !important;
     overflow-x: hidden !important;
-    padding: 0.5rem 0 !important;
-    margin: 0 !important;
+    padding: 0.35rem 0 !important;
+    margin: 0.5rem 0 0 0 !important;
     width: 100% !important;
-    mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent) !important;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent) !important;
+    mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 2%, black 98%, transparent) !important;
   }
 
   .brand-carousel-marquee-wrapper::-webkit-scrollbar {
-    display: none;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   .brand-carousel-marquee-track {
-    animation: autoScrollMarquee 35s linear infinite !important;
-    -webkit-animation: autoScrollMarquee 35s linear infinite !important;
-    width: max-content !important;
     display: flex !important;
-    gap: 14px !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    animation: autoScrollMarquee 30s linear infinite !important;
+    -webkit-animation: autoScrollMarquee 30s linear infinite !important;
+    animation-play-state: running !important;
+    -webkit-animation-play-state: running !important;
+    width: max-content !important;
+    gap: 12px !important;
     padding: 0.25rem 0 !important;
     will-change: transform !important;
     transform: translate3d(0, 0, 0) !important;
@@ -1713,10 +1715,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .brand-carousel-marquee-track .brand-unified-media-card {
-    flex: 0 0 215px !important;
-    width: 215px !important;
-    min-width: 215px !important;
-    max-width: 215px !important;
+    flex: 0 0 210px !important;
+    width: 210px !important;
+    min-width: 210px !important;
+    max-width: 210px !important;
     scroll-snap-align: unset !important;
     contain: content;
     display: flex !important;
@@ -1724,15 +1726,13 @@ h1, h2, h3, h4, h5, h6 {
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
   }
 
-  .brand-carousel-marquee-track .brand-unified-media-card:active {
-    transform: scale(1.02) translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-    z-index: 5;
-  }
-
   /* Show duplicate set on mobile for seamless infinite auto-scroll */
-  .brand-unified-media-card[aria-hidden="true"] {
+  .brand-carousel-marquee-track .brand-unified-media-card[aria-hidden="true"] {
     display: flex !important;
+    flex: 0 0 210px !important;
+    width: 210px !important;
+    min-width: 210px !important;
+    max-width: 210px !important;
   }
 
   .brand-short-thumb-container {
