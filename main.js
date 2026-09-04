@@ -706,10 +706,30 @@ document.addEventListener('DOMContentLoaded', () => {
         mailAppBtn.href = mailtoUrl;
       }
 
-      // Automatically launch mail client
+      // Dual delivery: Send via background API with reply-to headers
+      try {
+        fetch("https://formsubmit.co/ajax/Solutions@reachskyline.com", {
+          method: "POST",
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            _replyto: email,
+            service: service,
+            message: message,
+            _subject: `[Reach Skyline Portfolio] Project Inquiry from ${name} - ${service}`,
+            _template: 'table'
+          })
+        }).catch(() => {});
+      } catch (err) {}
+
+      // Automatically launch default email app
       setTimeout(() => {
         window.location.href = mailtoUrl;
-      }, 100);
+      }, 150);
 
       // Transition to success & direct dispatch screen
       contactForm.reset();
