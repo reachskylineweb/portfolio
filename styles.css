@@ -1376,10 +1376,18 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+#social .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: clamp(1.5rem, 3vw, 4rem);
+  padding-right: clamp(1.5rem, 3vw, 4rem);
+}
+
 .brand-showcase-list {
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
+  width: 100%;
 }
 
 .brand-showcase-card {
@@ -1388,6 +1396,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-card);
   padding: 2.5rem;
+  width: 100%;
   transition: all var(--transition-smooth);
 }
 
