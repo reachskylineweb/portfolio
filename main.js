@@ -709,6 +709,38 @@ function filterSocialClient(clientId, btn) {
 }
 
 /**
+ * Filter Paid Media & Ad Creatives by Client
+ */
+function filterAdClient(clientKey, btn) {
+  document.querySelectorAll('.ad-filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    const matchingBtn = document.querySelector(`.ad-filter-btn[data-target="${clientKey}"]`);
+    if (matchingBtn) matchingBtn.classList.add('active');
+  }
+
+  const grid = document.getElementById('adPostersGrid');
+  if (grid) {
+    grid.style.opacity = '0.3';
+  }
+
+  setTimeout(() => {
+    const cards = document.querySelectorAll('.ad-poster-card');
+    cards.forEach(card => {
+      if (clientKey === 'all' || card.getAttribute('data-ad-client') === clientKey) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+    if (grid) {
+      grid.style.opacity = '1';
+    }
+  }, 150);
+}
+
+/**
  * Scroll looping carousel track
  */
 function scrollCarousel(trackId, direction) {

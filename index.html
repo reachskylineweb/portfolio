@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css?v=25.0" />
+  <link rel="stylesheet" href="styles.css?v=26.0" />
 </head>
 <body>
 
@@ -2638,55 +2638,766 @@
   <!-- =========================================================================
        9. Social Media Advertising (Tata Motors & Carousel Ads)
        ========================================================================= -->
+  <!-- =========================================================================
+       10. Paid Media & Ads (Advertising That Gets Attention)
+       ========================================================================= -->
   <section class="section" id="advertising">
     <div class="container">
-      <div class="section-header">
-        <div class="section-tag">Paid Media & Ads</div>
+      <div class="section-header text-center">
+        <div class="section-tag">PAID MEDIA &amp; ADS</div>
         <h2 class="section-title">Advertising That <span class="text-gradient-gold">Gets Attention.</span></h2>
-        <p class="section-subtitle">Multi-format advertising campaigns engineered for maximum click-through rates and high-intent customer acquisition.</p>
+        <p class="section-subtitle">Multi-format advertising campaigns engineered for maximum click-through rates, brand recall, and high-intent customer acquisition across national and regional brands.</p>
       </div>
 
-      <!-- Featured Ad Client: Tata Motors (Page 47) -->
+      <!-- Featured Ad Client: Tata Motors -->
       <div class="ads-highlight-card">
         <div class="ads-highlight-content">
           <span class="section-tag">Featured Client Campaign</span>
           <h3>Tata Motors Advertising</h3>
           <p>
-            High-impact digital ad creative and targeted performance marketing for Tata Motors, combining sleek automotive visual aesthetics with strong value messaging.
+            High-impact digital ad creative and targeted performance marketing for Tata Motors, combining sleek automotive visual aesthetics with strong value messaging and conversion-focused CTAs.
           </p>
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <button class="btn btn-outline-gold btn-sm" onclick="openLightbox('./assets/page_47.webp', 'Tata Motors Advertising Campaign')">View Ad Visual</button>
-            <button class="btn btn-secondary btn-sm" onclick="openContactModal('Social Media Advertising')">Discuss Ad Strategy</button>
+            <button class="btn btn-outline-gold btn-sm" onclick="filterAdClient('tata', document.querySelector('.ad-filter-btn[data-target=\'tata\']'))">View Tata Creatives (6)</button>
+            <button class="btn btn-secondary btn-sm" onclick="openContactModal('Paid Media &amp; Advertising')">Discuss Ad Strategy</button>
           </div>
         </div>
-        <div class="ads-highlight-visual" onclick="openLightbox('./assets/page_47.webp', 'Tata Motors Campaign')">
-          <img src="./assets/page_47.webp" alt="Tata Motors Campaign" style="cursor: pointer; width: 100%;" loading="lazy"  decoding="async" />
+        <div class="ads-highlight-visual" onclick="openLightbox('./assets/ad_creative_01.webp', 'Tata Motors Campaign')">
+          <img src="./assets/ad_creative_01.webp" alt="Tata Motors Campaign" style="cursor: pointer; width: 100%; border-radius: var(--radius-md);" loading="lazy" decoding="async" />
         </div>
       </div>
 
-      <!-- Carousel Ads & Video Ads Grid (Pages 45, 46, 48, 49, 50) -->
-      <div class="ads-campaign-grid">
-        <div class="glass-card" style="padding: 1.5rem; cursor: pointer;" onclick="openLightbox('./assets/page_45.webp', 'Carousel Ads Campaign')">
-          <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Carousel Ads</h4>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Multi-slide narrative ad formats with structured visual sequences.</p>
-          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle);">
-            <img src="./assets/page_45.webp" alt="Carousel Ads" loading="lazy"  decoding="async" />
+      <!-- Ad Creatives Filter Bar -->
+      <div class="ad-filter-bar">
+        <button class="ad-filter-btn active" data-target="all" onclick="filterAdClient('all', this)">All Creatives <span class="ad-count-badge">48</span></button>
+        <button class="ad-filter-btn" data-target="tata" onclick="filterAdClient('tata', this)">Tata Motors <span class="ad-count-badge">6</span></button>
+        <button class="ad-filter-btn" data-target="gem" onclick="filterAdClient('gem', this)">GEM Hospitals <span class="ad-count-badge">22</span></button>
+        <button class="ad-filter-btn" data-target="healing" onclick="filterAdClient('healing', this)">Healing Earth <span class="ad-count-badge">14</span></button>
+        <button class="ad-filter-btn" data-target="scsvmv" onclick="filterAdClient('scsvmv', this)">SCSVMV University <span class="ad-count-badge">4</span></button>
+        <button class="ad-filter-btn" data-target="rk" onclick="filterAdClient('rk', this)">RK Hospitality <span class="ad-count-badge">1</span></button>
+        <button class="ad-filter-btn" data-target="supreme" onclick="filterAdClient('supreme', this)">Supreme Hospitals <span class="ad-count-badge">1</span></button>
+      </div>
+
+      <!-- 48 Ad Posters Grid -->
+      <div class="ad-posters-grid" id="adPostersGrid">
+        <div class="ad-poster-card" data-ad-client="tata" onclick="openLightbox('./assets/ad_creative_01.webp', 'Tata Motors / Tata Creative - Automotive & Performance Ads')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_01.webp" alt="Tata Motors / Tata Creative Ad Creative 1" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Tata Motors / Tata Creative</div>
+            <h5 class="ad-poster-title">Automotive & Performance Ads</h5>
           </div>
         </div>
-
-        <div class="glass-card" style="padding: 1.5rem; cursor: pointer;" onclick="openLightbox('./assets/page_48.webp', 'Video Ads Showcase')">
-          <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Video Ads</h4>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">Short-form dynamic motion creatives engineered for feed scroll-stopping power.</p>
-          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle);">
-            <img src="./assets/page_48.webp" alt="Video Ads" loading="lazy"  decoding="async" />
+        <div class="ad-poster-card" data-ad-client="tata" onclick="openLightbox('./assets/ad_creative_02.webp', 'Tata Motors / Tata Creative - Automotive & Performance Ads')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_02.webp" alt="Tata Motors / Tata Creative Ad Creative 2" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Tata Motors / Tata Creative</div>
+            <h5 class="ad-poster-title">Automotive & Performance Ads</h5>
           </div>
         </div>
-
-        <div class="glass-card" style="padding: 1.5rem; cursor: pointer;" onclick="openLightbox('./assets/page_50.webp', 'Campaign Performance Metrics')">
-          <h4 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Campaign Performance</h4>
-          <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem;">End-to-end metrics tracking reach, CTR, conversion value, and audience insights.</p>
-          <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-subtle);">
-            <img src="./assets/page_50.webp" alt="Ad Metrics" loading="lazy"  decoding="async" />
+        <div class="ad-poster-card" data-ad-client="tata" onclick="openLightbox('./assets/ad_creative_03.webp', 'Tata Motors / Tata Creative - Automotive & Performance Ads')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_03.webp" alt="Tata Motors / Tata Creative Ad Creative 3" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Tata Motors / Tata Creative</div>
+            <h5 class="ad-poster-title">Automotive & Performance Ads</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="tata" onclick="openLightbox('./assets/ad_creative_04.webp', 'Tata Motors / Tata Creative - Automotive & Performance Ads')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_04.webp" alt="Tata Motors / Tata Creative Ad Creative 4" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Tata Motors / Tata Creative</div>
+            <h5 class="ad-poster-title">Automotive & Performance Ads</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="tata" onclick="openLightbox('./assets/ad_creative_05.webp', 'Tata Motors / Tata Creative - Automotive & Performance Ads')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_05.webp" alt="Tata Motors / Tata Creative Ad Creative 5" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Tata Motors / Tata Creative</div>
+            <h5 class="ad-poster-title">Automotive & Performance Ads</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="tata" onclick="openLightbox('./assets/ad_creative_06.webp', 'Tata Motors / Tata Creative - Automotive & Performance Ads')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_06.webp" alt="Tata Motors / Tata Creative Ad Creative 6" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Tata Motors / Tata Creative</div>
+            <h5 class="ad-poster-title">Automotive & Performance Ads</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_07.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_07.webp" alt="GEM Hospitals Ad Creative 7" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_08.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_08.webp" alt="GEM Hospitals Ad Creative 8" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_09.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_09.webp" alt="GEM Hospitals Ad Creative 9" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_10.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_10.webp" alt="GEM Hospitals Ad Creative 10" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_11.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_11.webp" alt="GEM Hospitals Ad Creative 11" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_12.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_12.webp" alt="GEM Hospitals Ad Creative 12" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_13.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_13.webp" alt="GEM Hospitals Ad Creative 13" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_14.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_14.webp" alt="GEM Hospitals Ad Creative 14" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_15.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_15.webp" alt="GEM Hospitals Ad Creative 15" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_16.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_16.webp" alt="GEM Hospitals Ad Creative 16" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_17.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_17.webp" alt="GEM Hospitals Ad Creative 17" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_18.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_18.webp" alt="GEM Hospitals Ad Creative 18" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_19.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_19.webp" alt="GEM Hospitals Ad Creative 19" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_20.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_20.webp" alt="GEM Hospitals Ad Creative 20" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_21.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_21.webp" alt="GEM Hospitals Ad Creative 21" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_22.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_22.webp" alt="GEM Hospitals Ad Creative 22" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_23.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_23.webp" alt="GEM Hospitals Ad Creative 23" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_24.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_24.webp" alt="GEM Hospitals Ad Creative 24" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_25.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_25.webp" alt="GEM Hospitals Ad Creative 25" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_26.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_26.webp" alt="GEM Hospitals Ad Creative 26" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_27.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_27.webp" alt="GEM Hospitals Ad Creative 27" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="gem" onclick="openLightbox('./assets/ad_creative_28.webp', 'GEM Hospitals - Healthcare & Clinical Campaigns')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_28.webp" alt="GEM Hospitals Ad Creative 28" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">GEM Hospitals</div>
+            <h5 class="ad-poster-title">Healthcare & Clinical Campaigns</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_29.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_29.webp" alt="Healing Earth Ad Creative 29" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_30.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_30.webp" alt="Healing Earth Ad Creative 30" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_31.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_31.webp" alt="Healing Earth Ad Creative 31" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_32.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_32.webp" alt="Healing Earth Ad Creative 32" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_33.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_33.webp" alt="Healing Earth Ad Creative 33" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_34.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_34.webp" alt="Healing Earth Ad Creative 34" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_35.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_35.webp" alt="Healing Earth Ad Creative 35" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_36.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_36.webp" alt="Healing Earth Ad Creative 36" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_37.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_37.webp" alt="Healing Earth Ad Creative 37" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_38.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_38.webp" alt="Healing Earth Ad Creative 38" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_39.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_39.webp" alt="Healing Earth Ad Creative 39" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_40.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_40.webp" alt="Healing Earth Ad Creative 40" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_41.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_41.webp" alt="Healing Earth Ad Creative 41" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="healing" onclick="openLightbox('./assets/ad_creative_42.webp', 'Healing Earth - Wellness & Organic Products')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_42.webp" alt="Healing Earth Ad Creative 42" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Healing Earth</div>
+            <h5 class="ad-poster-title">Wellness & Organic Products</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="scsvmv" onclick="openLightbox('./assets/ad_creative_43.webp', 'SCSVMV University - Higher Education & Admissions')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_43.webp" alt="SCSVMV University Ad Creative 43" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">SCSVMV University</div>
+            <h5 class="ad-poster-title">Higher Education & Admissions</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="scsvmv" onclick="openLightbox('./assets/ad_creative_44.webp', 'SCSVMV University - Higher Education & Admissions')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_44.webp" alt="SCSVMV University Ad Creative 44" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">SCSVMV University</div>
+            <h5 class="ad-poster-title">Higher Education & Admissions</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="scsvmv" onclick="openLightbox('./assets/ad_creative_45.webp', 'SCSVMV University - Higher Education & Admissions')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_45.webp" alt="SCSVMV University Ad Creative 45" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">SCSVMV University</div>
+            <h5 class="ad-poster-title">Higher Education & Admissions</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="scsvmv" onclick="openLightbox('./assets/ad_creative_46.webp', 'SCSVMV University - Higher Education & Admissions')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_46.webp" alt="SCSVMV University Ad Creative 46" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">SCSVMV University</div>
+            <h5 class="ad-poster-title">Higher Education & Admissions</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="rkity" onclick="openLightbox('./assets/ad_creative_47.webp', 'RK Hospitality - Event & Culinary Creative')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_47.webp" alt="RK Hospitality Ad Creative 47" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">RK Hospitality</div>
+            <h5 class="ad-poster-title">Event & Culinary Creative</h5>
+          </div>
+        </div>
+        <div class="ad-poster-card" data-ad-client="supreme" onclick="openLightbox('./assets/ad_creative_48.webp', 'Supreme Hospitals - Multi-Speciality Healthcare')">
+          <div class="ad-poster-img-wrap">
+            <img src="./assets/ad_creative_48.webp" alt="Supreme Hospitals Ad Creative 48" loading="lazy" decoding="async" />
+            <div class="ad-poster-overlay">
+              <span class="ad-poster-zoom-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                View Poster
+              </span>
+            </div>
+          </div>
+          <div class="ad-poster-info">
+            <div class="ad-poster-client-tag">Supreme Hospitals</div>
+            <h5 class="ad-poster-title">Multi-Speciality Healthcare</h5>
           </div>
         </div>
       </div>
@@ -3781,6 +4492,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="main.js?v=24.0"></script>
+  <script src="main.js?v=26.0"></script>
 </body>
 </html>
