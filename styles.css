@@ -3093,6 +3093,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 6.5rem 0;
 }
 
+.saas-products-section .section-tag {
+  text-transform: none;
+}
+
 .saas-showcase-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
