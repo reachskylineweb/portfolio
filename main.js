@@ -396,21 +396,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Video Showcase Catalog & Multi-Video Modal Handlers
   const videoCatalog = {
     v1: {
-      category: "GEM Hospital • Medical Awareness & Success Story",
-      title: "Doctor Awareness & Liver Transplant Success",
-      description: "Medical films produced for GEM Hospitals featuring Doctor Anand Vijai explaining liver health awareness and patient transplant success stories.",
+      category: "GEM Hospital • Medical Innovation",
+      title: "Operation Infinity: Redefining the Future of Surgery",
+      description: "Medical commercial produced for GEM Hospitals highlighting robotic, laparoscopic, and next-generation surgical advancements.",
       videos: [
         {
-          id: "nNAC3Hp26iI",
-          title: "Is Alcohol Safe? Complete Truth About Liver Damage | Doctor Anand Vijai Explains — GEM Hospitals",
-          url: "https://www.youtube.com/watch?v=nNAC3Hp26iI",
-          thumb: "https://img.youtube.com/vi/nNAC3Hp26iI/hqdefault.jpg"
-        },
-        {
-          id: "GuEn0Ea3_d0",
-          title: "Second Life | Liver Transplant Success Story | GEM Hospital | Dr. Anand Vijai",
-          url: "https://www.youtube.com/watch?v=GuEn0Ea3_d0",
-          thumb: "https://img.youtube.com/vi/GuEn0Ea3_d0/hqdefault.jpg"
+          id: "X2cSQ4ngkJk",
+          title: "Operation Infinity: Redefining the Future of Surgery — GEM Hospital Chennai",
+          url: "https://www.youtube.com/watch?v=X2cSQ4ngkJk",
+          thumb: "./assets/gem_video_split_thumb.webp"
         }
       ]
     },
