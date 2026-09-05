@@ -415,21 +415,21 @@ document.addEventListener('DOMContentLoaded', () => {
       ]
     },
     v2: {
-      category: "Corporate Film (2 Videos)",
-      title: "Executive & Facility Walkthrough",
-      description: "In-depth executive interviews and facility walkthroughs covering market trends and legal/reputational safety steps.",
+      category: "GEM Hospital • Podcast & Robotic Surgery (2 Videos)",
+      title: "Doctor Podcast & Robotic Surgery Innovation",
+      description: "Medical podcast series and robotic surgical facility walkthroughs produced for GEM Hospital Chennai.",
       videos: [
         {
-          id: "dMHPc2zpHGM",
-          title: "Video 1: Financial Trends & Safe Business Steps",
-          url: "https://www.youtube.com/watch?v=dMHPc2zpHGM",
-          thumb: "https://img.youtube.com/vi/dMHPc2zpHGM/hqdefault.jpg"
+          id: "Qc8iDEH4SNQ",
+          title: "Dr Gem Podcast Season-1 Episode-1 | GEM Hospital Chennai",
+          url: "https://www.youtube.com/watch?v=Qc8iDEH4SNQ",
+          thumb: "https://img.youtube.com/vi/Qc8iDEH4SNQ/hqdefault.jpg"
         },
         {
-          id: "Yka3ljsJrQQ",
-          title: "Video 2: Executive Advisory & Risk Management",
-          url: "https://www.youtube.com/watch?v=Yka3ljsJrQQ",
-          thumb: "https://img.youtube.com/vi/Yka3ljsJrQQ/hqdefault.jpg"
+          id: "PqOHCmj1AKk",
+          title: "Inside Robotic Surgery: How It Works | GEM Hospital Chennai",
+          url: "https://www.youtube.com/watch?v=PqOHCmj1AKk",
+          thumb: "https://img.youtube.com/vi/PqOHCmj1AKk/hqdefault.jpg"
         }
       ]
     },
