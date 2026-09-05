@@ -396,15 +396,21 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Video Showcase Catalog & Multi-Video Modal Handlers
   const videoCatalog = {
     v1: {
-      category: "GEM Hospital • Medical Innovation",
-      title: "Operation Infinity: Redefining the Future of Surgery",
-      description: "Medical commercial produced for GEM Hospitals highlighting robotic, laparoscopic, and next-generation surgical advancements.",
+      category: "GEM Hospital • Medical & Surgical Awareness (2 Videos)",
+      title: "Surgery Innovation & Medical Awareness",
+      description: "Healthcare films produced for GEM Hospitals highlighting robotic and laparoscopic surgical innovation as well as specialist medical health awareness.",
       videos: [
         {
           id: "X2cSQ4ngkJk",
           title: "Operation Infinity: Redefining the Future of Surgery — GEM Hospital Chennai",
           url: "https://www.youtube.com/watch?v=X2cSQ4ngkJk",
-          thumb: "./assets/gem_video_split_thumb.webp"
+          thumb: "https://img.youtube.com/vi/X2cSQ4ngkJk/hqdefault.jpg"
+        },
+        {
+          id: "S9sqCNEf9qM",
+          title: "Understanding Obesity: Science & Simple Lifestyle Fixes | Ft. Dr. Jayanth Leo — GEM Hospital",
+          url: "https://www.youtube.com/watch?v=S9sqCNEf9qM",
+          thumb: "https://img.youtube.com/vi/S9sqCNEf9qM/hqdefault.jpg"
         }
       ]
     },
