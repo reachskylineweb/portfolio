@@ -1663,12 +1663,21 @@ h1, h2, h3, h4, h5, h6 {
   width: max-content !important;
   animation: autoScrollMarquee 50s linear infinite !important;
   -webkit-animation: autoScrollMarquee 50s linear infinite !important;
-  animation-play-state: running !important;
-  -webkit-animation-play-state: running !important;
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
   padding: 0.5rem 0;
   will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+/* Pause marquee scrolling when hovering on desktop view for all clients */
+@media (hover: hover) and (min-width: 993px) {
+  .brand-carousel-marquee-wrapper:hover .brand-carousel-marquee-track,
+  .brand-carousel-marquee-track:hover {
+    animation-play-state: paused !important;
+    -webkit-animation-play-state: paused !important;
+  }
 }
 
 @media (max-width: 992px) {
